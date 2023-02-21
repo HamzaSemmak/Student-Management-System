@@ -1,14 +1,18 @@
-2023-02-21 19:16:07,513 [1] [INFO ] Student_Management.Program: Start Application Student Management System
-2023-02-21 19:16:27,041 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
-2023-02-21 19:17:07,308 [1] [INFO ] Student_Management.Program: Start Application Student Management System
-2023-02-21 19:17:19,794 [1] [ERROR] Student_Management.Program: Status : 200, UserName : test, Password : test
-2023-02-21 19:30:42,895 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
-2023-02-21 19:40:52,037 [1] [INFO ] Student_Management.Program: Start Application Student Management System
-2023-02-21 19:41:09,080 [1] [ERROR] Student_Management.Program: Error : Password is is incorrect, Please try again 
-2023-02-21 19:49:20,451 [1] [INFO ] Student_Management.Program: Start Application Student Management System
-2023-02-21 19:49:34,415 [1] [ERROR] Student_Management.Program: Error : Password is is incorrect, Please try again 
-2023-02-21 19:49:44,303 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
-2023-02-21 19:52:00,965 [1] [INFO ] Student_Management.Program: Start Application Student Management System
-2023-02-21 19:52:16,762 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
-2023-02-21 20:06:23,282 [1] [INFO ] Student_Management.Program: Start Application Student Management System
-2023-02-21 20:06:38,916 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-21 21:03:51,721 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-21 21:04:12,669 [1] [ERROR] Student_Management.Program: Error : Your account is locked, contact your administrator 
+2023-02-21 21:04:16,078 [1] [ERROR] Student_Management.Program: Error : Your account is locked, contact your administrator 
+2023-02-21 21:04:18,004 [1] [ERROR] Student_Management.Program: Error : Your account is locked, contact your administrator 
+2023-02-21 21:04:29,906 [1] [ERROR] Student_Management.Program: Error : Your account is locked, contact your administrator 
+2023-02-21 21:04:44,083 [1] [ERROR] Student_Management.Program: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+2023-02-21 21:04:44,083 [1] [ERROR] Student_Management.Program: Error : Impossible d'effectuer un cast d'un objet de DBNull en d'autres types. 
+2023-02-21 21:06:24,080 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-21 21:06:26,521 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-21 21:06:27,854 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-21 21:07:32,241 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-21 21:07:46,506 [1] [ERROR] Student_Management.Program: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+2023-02-21 21:07:46,511 [1] [ERROR] Student_Management.Program: Error : Impossible d'effectuer un cast d'un objet de DBNull en d'autres types. 
+2023-02-21 21:07:58,851 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-21 21:10:44,549 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-21 21:11:00,425 [1] [ERROR] Student_Management.Program: Error : Error 203 : Your account is locked, contact your administrator 
+2023-02-21 21:11:07,063 [1] [ERROR] Student_Management.Program: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+2023-02-21 21:11:07,067 [1] [ERROR] Student_Management.Program: Error : Impossible d'effectuer un cast d'un objet de DBNull en d'autres types. 

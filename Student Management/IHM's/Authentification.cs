@@ -41,15 +41,20 @@ namespace Student_Management.IHM_s
                     int status = User.Authentification(guna2TextBox1.Text, guna2TextBox2.Text);
                     if (status == 201)
                     {
-                        message = "User Name is incorrect, Please try again";
+                        message = $"Error {status} : User Name is incorrect, Please try again";
                         Program.LaunchAlertForm(message);
                     }
                     else if(status == 202)
                     {
-                        message = "Password is is incorrect, Please try again";
+                        message = $"Error {status} : Password is is incorrect, Please try again";
                         Program.LaunchAlertForm(message);
                     }
-                    else
+                    else if(status == 203)
+                    {
+                        message = $"Error {status} : Your account is locked, contact your administrator";
+                        Program.LaunchAlertForm(message);
+                    }
+                    else if(status == 200)
                     {
                         this.Hide();
                         Program.LaunchPrincipalForm();
@@ -61,7 +66,7 @@ namespace Student_Management.IHM_s
             {
                 logger.Error(ex.Message);
                 Program.LaunchAlertForm(ex.Message);
-            }
+            } 
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
