@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using Student_Management.Modules.UserModel.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
-using Guna.UI2.WinForms;
 
 namespace Student_Management.Modules.UserModel.Controller
 {
