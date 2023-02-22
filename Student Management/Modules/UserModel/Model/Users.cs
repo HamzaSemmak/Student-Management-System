@@ -45,7 +45,11 @@ namespace Student_Management.Modules.UserModel.Model
             set => checks = value; 
         }
 
-        public Users() { }
+        public Users() 
+        {
+            this.Checks = 1;
+            this.status = "InLocked";
+        }
 
         public Users(string Name, string Password)
         {

@@ -27,16 +27,26 @@ Create Procedure Authentification
 )
 As
 Begin 
-	If exists (Select * from Users where Name = @UserName)
-		Begin Set @msg = 200 /* Test Passed Succefly */
+	If Exists (Select COUNT(*) from Users where Name = @UserName Having COUNT(*)=0 )
+		Begin Set @msg = 201 /* UserName and Password is Incorrect */
 		Return @msg End
-	Else
-		Set @msg = 201 /* UserName and Password is Incorrect */
-		Return @msg
+	Else If Exists (Select * from Users where Name = @UserName)
+		If Exists (Select * from Users where Name = @UserName and Checks = 5)
+			Begin Set @msg = 203 /* Locked Account */
+			Update Users Set Checks = 5, Status = 'Locked' where Name = @UserName
+			Return @msg End
+		Else If Not Exists (Select * from Users where Name = @UserName And Password = @Password)
+			Begin Set @msg = 202 /*Password is Incorrect */
+			Update Users Set Checks = Checks + 1 where Name = @UserName
+			Return @msg End
+		Else If Exists (Select * from Users where Name = @UserName And Password = @Password)
+			Begin Set @msg = 200 /* UserName and Password Corrrect */
+			Update Users Set Checks = 1, Status = 'InLocked' where Name = @UserName And Password = @Password  
+			Return @msg End
 End
 
 Declare @status int
-Execute Authentification 'test', 'test', @status Output
+Execute Authentification 'tests', 'test', @status Output
 Select @status
 
 Select * from Users;
