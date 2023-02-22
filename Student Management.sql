@@ -4,18 +4,17 @@ use Student_Management;
 
 /* 
 *	Table : 
-*/
-
+*/ 
 Create Table Users (
 	ID int primary key identity(1,1),
-	Name varchar(255) Unique,
-	Password varchar(255),
-	Email varchar(255),
-	Phone varchar(10),
+	Name varchar(45) Unique,
+	Password varchar(20),
 	Status varchar(25) default 'InLocked',
 	Constraint CK_User_Status check (Status in ('Locked', 'InLocked')),
 	Checks int default 1,
 	Constraint CK_Checks check (Checks <= 5),
+	UserType varchar(25) default 'User',
+	Constraint CK_UserType check (UserType in ('Admin', 'User')),
 );
 
 /* Procedure Stocke */
