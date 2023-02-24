@@ -43,7 +43,7 @@ namespace Student_Management
 
         public static void LaunchAlertForm(string message)
         {
-            Alert _Alert = new Alert(message);
+            FailAlert _Alert = new FailAlert(message);
             _Alert.Show();
         }
 
@@ -51,8 +51,6 @@ namespace Student_Management
         static void Main()
         {
             logger.Info("Start Application Student Management System");
-            UsersController usersController = new UsersController();
-            logger.Info($" => {usersController.AllUsers()}");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(_Splash());

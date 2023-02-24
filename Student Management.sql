@@ -7,8 +7,14 @@ use Student_Management;
 */ 
 Create Table Users (
 	ID int primary key identity(1,1),
+	Matricule varchar(10) unique,
 	Name varchar(45) Unique,
 	Password varchar(20),
+	Phone int,
+	DateNaissance date,
+	Age int,
+	Adresse varchar(255),
+	FormerType varchar(255),
 	UserType varchar(25) default 'User',
 	Constraint CK_UserType check (UserType in ('Admin', 'User')),
 	Status varchar(25) default 'InLocked',
@@ -16,6 +22,19 @@ Create Table Users (
 	Checks int default 1,
 	Constraint CK_Checks check (Checks <= 5),
 );
+
+Create Table LockedUser (
+	ID int primary key identity(1,1),
+	ID_User int foreign key references Users(ID)
+);
+
+Create Table FormersType(
+	ID int primary key identity(1,1),
+	type varchar(255)
+);
+
+/* Insertion */
+insert into FormersType values('Teacher'),('Directeur of School'),('General guard'),('Security'),('Driver');
 
 /* Procedure Stocke */
 Create Procedure Authentification
@@ -47,26 +66,6 @@ Declare @status int
 Execute Authentification 'Hamza Semmak', 'aa102374', @status Output
 Select @status
 
-Create Procedure CreateUser
-(
-	@Name varchar(255), 
-	@Password varchar(20),
-	@UserType varchar(25),
-	@msg int Out
-)
-As
-Begin 
-	If Exists (Select * from Users where Name = @Name)
-		Begin Set @msg = 40204
-		Return @msg End
-	Else
-		Begin Insert Into Users(Name, Password, UserType) Values(@Name, @Password, @UserType);
-		Set @msg = 40205
-		Return @msg End
-End
-
-Declare @status int
-Execute CreateUser 'Test', 'aa102374', 'Admin', @status Output
-Select @status
 
 Select *  from Users;
+Select *  from FormersType;

@@ -42,7 +42,6 @@ C:\WorkSpace\Student Management\Student Management\bin\Debug\log4net.xml
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.csproj.AssemblyReference.cache
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.csproj.SuggestedBindingRedirects.cache
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.Authentification.resources
-C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.Alert.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.LoadingForm.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.PrincipalForm.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.Properties.Resources.resources
@@ -51,3 +50,4 @@ C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.csproj.CopyComplete
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.exe
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.pdb
+C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.FailAlert.resources

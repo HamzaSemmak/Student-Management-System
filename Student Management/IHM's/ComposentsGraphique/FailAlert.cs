@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace Student_Management.IHM_s.ComposentsGraphique
 {
-    public partial class Alert : Form
+    public partial class FailAlert : Form
     {
-        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Alert));
-        public Alert(string Msg)
+        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(FailAlert));
+        public FailAlert(string Msg)
         {
             InitializeComponent();
             this.label2.Text = $"{Msg.ToString()}";
