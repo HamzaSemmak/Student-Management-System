@@ -4,9 +4,8 @@ using System.Data.SqlClient;
 
 namespace Student_Management.Modules.DB_Connection
 {
-    internal class DB
+    public class DB
     {
-        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(DB));
         protected string ConnectionString;
         protected SqlConnection sqlConnection;
         protected SqlCommand sqlCommand;

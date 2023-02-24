@@ -1,15 +1,11 @@
 ﻿using Guna.UI2;
 using log4net;
-using log4net.Repository.Hierarchy;
 using Student_Management.IHM_s;
 using Student_Management.IHM_s.ComposentsGraphique;
-using Student_Management.Modules.DB_Connection;
 using Student_Management.Modules.LoggerManager;
+using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Student_Management
@@ -55,6 +51,8 @@ namespace Student_Management
         static void Main()
         {
             logger.Info("Start Application Student Management System");
+            UsersController usersController = new UsersController();
+            logger.Info($" => {usersController.AllUsers()}");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(_Splash());

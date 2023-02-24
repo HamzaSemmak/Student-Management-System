@@ -1,0 +1,34 @@
+2023-02-23 16:14:04,921 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 16:14:14,001 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 21:06:22,779 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 21:06:31,143 [1] [ERROR] Student_Management.Program: Error : There is an Empty field 
+2023-02-23 21:06:38,924 [1] [ERROR] Student_Management.Program: Error : Error 40201 : UserName is incorrect, Please try again 
+2023-02-23 21:06:43,519 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 21:15:07,486 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 21:15:22,336 [1] [INFO ] Student_Management.Program: Response... 
+ {Info: 40200, UserName: User, Password : AA102374}
+2023-02-23 21:15:24,461 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 21:35:54,553 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 21:36:23,534 [1] [INFO ] Student_Management.Program: Logged Successfly : 
+{Info: 40200, UserName: user, Password : aa102374}
+2023-02-23 21:36:42,366 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 21:39:35,714 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 21:39:56,245 [1] [INFO ] Student_Management.Program: Logged Successfly : 
+{Info: 40200, UserName: User, Password : AA102374}
+2023-02-23 21:40:01,653 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 23:28:36,479 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 23:28:36,614 [1] [ERROR] Student_Management.Program: Procedure or function 'CreateUser' expects parameter '@Password', which was not supplied.
+2023-02-23 23:29:10,398 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 23:29:34,166 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 23:29:34,220 [1] [ERROR] Student_Management.Program: Procedure or function 'CreateUser' expects parameter '@Password', which was not supplied.
+2023-02-23 23:29:54,463 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 23:29:58,878 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 23:29:58,936 [1] [INFO ] Student_Management.Program: 40200
+2023-02-23 23:30:01,368 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 23:30:14,003 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 23:30:14,057 [1] [ERROR] Student_Management.Program: Violation of UNIQUE KEY constraint 'UQ__Users__737584F678761254'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (Hamza Semmak).
+The statement has been terminated.
+2023-02-23 23:30:26,086 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-23 23:55:48,198 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 23:58:15,121 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-23 23:59:58,836 [1] [INFO ] Student_Management.Program: Start Application Student Management System

@@ -7,7 +7,7 @@ using System;
 
 namespace Student_Management.Modules.LoggerManager
 {
-    internal class Log4NetManager
+    public class Log4NetManager
     {
         private static ILog logger;
         private static ConsoleAppender ConsoleAppender;

@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Student_Management.Modules.UserModel.Controller
 {
-    internal class UsersController : Users
+    public class UsersController : Users
     {
-        public string RandomString(int size, bool lowerCase)
+        public string GenerateMatricule(int size, bool lowerCase)
         {
             StringBuilder builder = new StringBuilder();
             Random random = new Random();
@@ -59,6 +59,67 @@ namespace Student_Management.Modules.UserModel.Controller
             this.sqlCommand.ExecuteNonQuery();
             CloseConnection();
             return Convert.ToInt32(Output.Value);
+        }
+
+        public int Create(Users Object)
+        {
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            this.sqlCommand = new SqlCommand()
+            {
+                CommandText = "CreateUser",
+                Connection = this.sqlConnection,
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter Name = new SqlParameter()
+            {
+                ParameterName = "@Name",
+                SqlDbType = SqlDbType.VarChar,
+                Value = Object.Name,
+                Direction = ParameterDirection.Input
+            };
+            SqlParameter Password = new SqlParameter()
+            {
+                ParameterName = "@Password",
+                SqlDbType = SqlDbType.VarChar,
+                Value = Object.Password,
+                Direction = ParameterDirection.Input
+            };
+            SqlParameter UserType = new SqlParameter()
+            {
+                ParameterName = "@UserType",
+                SqlDbType = SqlDbType.VarChar,
+                Value = Object.UserType,
+                Direction = ParameterDirection.Input
+            };
+            SqlParameter Output = new SqlParameter()
+            {
+                ParameterName = "@msg",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Output
+            };
+            this.sqlCommand.Parameters.Add(Name);
+            this.sqlCommand.Parameters.Add(Password);
+            this.sqlCommand.Parameters.Add(UserType);
+            this.sqlCommand.Parameters.Add(Output);
+            this.OpenConnection();
+            this.sqlCommand.ExecuteNonQuery();
+            CloseConnection();
+
+            return Convert.ToInt32(Output.Value);
+
+        }
+
+        public void AllUsers()
+        {
+            this.sqlConnection = new SqlConnection(ConnectionString);
+            string Query = "Select * from Users";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if(this.sqlDataReader.Read())
+            {
+                //Here Hamza Semmak......
+            }
         }
 
     }
