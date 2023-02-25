@@ -8,3 +8,29 @@
 {Info: 40200, UserName: Hamza Semma, Password : AA102374}
 2023-02-24 20:23:29,326 [1] [INFO ] Student_Management.Program: Test : Student_Management.Modules.UserModel.Model.Users
 2023-02-24 20:28:57,788 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-24 23:29:53,255 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-24 23:30:08,845 [1] [ERROR] Student_Management.Program: Error : Error 40202 : Password is is incorrect, Please try again 
+2023-02-24 23:30:12,783 [1] [ERROR] Student_Management.Program: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+2023-02-24 23:30:12,783 [1] [ERROR] Student_Management.Program: Error : Tentative non valide de lecture lorsque aucune donnée n'est présente. 
+2023-02-24 23:30:36,406 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-24 23:31:25,533 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-24 23:31:47,227 [1] [INFO ] Student_Management.Program: Logged Successfly : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-02-24 23:31:47,227 [1] [ERROR] Student_Management.Program: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+2023-02-24 23:31:47,251 [1] [ERROR] Student_Management.Program: Error : Tentative non valide de lecture lorsque aucune donnée n'est présente. 
+2023-02-24 23:31:54,495 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-24 23:34:18,122 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-24 23:34:35,809 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-02-24 23:34:35,856 [1] [ERROR] Student_Management.Program: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+2023-02-24 23:34:35,863 [1] [ERROR] Student_Management.Program: Error : Tentative non valide de lecture lorsque aucune donnée n'est présente. 
+2023-02-24 23:34:45,766 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-24 23:40:17,653 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-24 23:40:37,721 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-02-24 23:40:37,721 [1] [INFO ] Student_Management.Program: Test : ID : 1
+2023-02-24 23:40:40,538 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-24 23:58:03,369 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-24 23:58:19,848 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-02-24 23:58:28,354 [1] [INFO ] Student_Management.Program: Exit Application Student Management System

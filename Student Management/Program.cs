@@ -15,8 +15,7 @@ namespace Student_Management
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
-        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Program));
-
+        public static ILog logger = Log4NetManager.GetLogger(typeof(Program));
         
         public static LoadingForm _Splash()
         {
@@ -26,6 +25,9 @@ namespace Student_Management
         public static void CloseApplication()
         {
             Application.Exit();
+            UsersController User = new UsersController();
+            User.Disconnected();
+            logger.Info("DisConnect...");
             logger.Info("Exit Application Student Management System");
         }
 

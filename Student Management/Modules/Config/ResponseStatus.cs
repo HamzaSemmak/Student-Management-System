@@ -12,8 +12,7 @@ namespace Student_Management.Modules.Config
         private int responseCodeLockedAccount = 40203;
         private int responseCodeIncorrectPassword = 40202;
         private int responseCodeAuth = 40200;
-        private int responseCodeExistUserName = 40204;
-        private int responseCodeCreateUser = 40205;
+
         public ResponseStatus() 
         {
             //
@@ -23,9 +22,5 @@ namespace Student_Management.Modules.Config
         public int ResponseCodeLockedAccount { get => responseCodeLockedAccount; set => responseCodeLockedAccount = value; }
         public int ResponseCodeIncorrectPassword { get => responseCodeIncorrectPassword; set => responseCodeIncorrectPassword = value; }
         public int ResponseCodeAuth { get => responseCodeAuth; set => responseCodeAuth = value; }
-        public int ResponseCodeExistUserName { get => responseCodeExistUserName; set => responseCodeExistUserName = value; }
-        public int ResponseCodeCreateUser { get => responseCodeCreateUser; set => responseCodeCreateUser = value; }
     }
-
-    
 }

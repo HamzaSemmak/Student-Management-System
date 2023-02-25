@@ -14,12 +14,11 @@ namespace Student_Management.IHM_s.ComposentsGraphique
 {
     public partial class FailAlert : Form
     {
-        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(FailAlert));
         public FailAlert(string Msg)
         {
             InitializeComponent();
             this.label2.Text = $"{Msg.ToString()}";
-            logger.Error($"Error : {Msg} ");
+            Program.logger.Error($"Error : {Msg} ");
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

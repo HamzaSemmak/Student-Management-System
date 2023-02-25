@@ -63,6 +63,50 @@ namespace Student_Management.Modules.UserModel.Controller
             return Convert.ToInt32(Output.Value);
         }
 
-        //
+        public int UserID()
+        {
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = "Select ID_User from LockedUser";
+            int ID = 0;
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if(this.sqlDataReader.Read())
+            {
+                ID = Convert.ToInt32(this.sqlDataReader["ID"]);
+            }
+            CloseConnection();
+            return ID;
+        }
+
+        public string[] GetUserInformation()
+        {
+            string[] User = new string[2];
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select * from Users where ID = {UserID()}";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if (this.sqlDataReader.Read())
+            {
+                User[0] = Convert.ToString(this.sqlDataReader["Name"]);
+                User[1] = Convert.ToString(this.sqlDataReader["UserType"]);
+            }
+            CloseConnection();
+
+            return User;
+        }
+
+        public void Disconnected()
+        {
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Delete from LockedUser where ID_User = {UserID()}";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            OpenConnection();
+            this.sqlCommand.ExecuteNonQuery();
+            Program.logger.Info("Test Passed Successfly");
+            Program.logger.Info($"ID : {UserID()} ");
+            CloseConnection();
+        }
     }
 }

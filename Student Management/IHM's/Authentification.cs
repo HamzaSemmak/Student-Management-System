@@ -9,13 +9,11 @@ namespace Student_Management.IHM_s
 {
     public partial class Authentification : Form
     {
-        public static ILog logger;
         public UsersController User;
         public ResponseStatus ResponseStatus;
         public Authentification()
         {
             InitializeComponent();
-            logger = Log4NetManager.GetLogger(typeof(Authentification));
             User = new UsersController();
             ResponseStatus = new ResponseStatus();
             label2.Text = $"CopyRight © {DateTime.Now.Year} All Right Reserved";
@@ -54,14 +52,14 @@ namespace Student_Management.IHM_s
                     {
                         this.Hide();
                         Program.LaunchPrincipalForm();
-                        logger.Info("Logged Successfly : \n{Info: " + status + ", UserName: " + guna2TextBox1.Text + ", Password : " + guna2TextBox2.Text + "}");
+                        Program.logger.Info("Logged Successfly, Information : \n{Info: " + status + ", UserName: " + guna2TextBox1.Text + ", Password : " + guna2TextBox2.Text + "}");
                     }
                 }
 
             }
             catch(Exception ex)
             {
-                logger.Error(ex.Message);
+                Program.logger.Error(ex.Message);
                 Program.LaunchAlertForm(ex.Message);
             } 
         }

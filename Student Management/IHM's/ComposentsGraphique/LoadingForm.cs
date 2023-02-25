@@ -18,6 +18,7 @@ namespace Student_Management.IHM_s.ComposentsGraphique
         public LoadingForm()
         {
             InitializeComponent();
+            Program.logger.Info("Connect...");
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

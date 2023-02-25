@@ -60,6 +60,7 @@ Begin
 		Else If Exists (Select * from Users where Name = @UserName And Password = @Password)
 			Begin Set @msg = 40200 /* UserName and Password Corrrect */
 			Update Users Set Checks = 1, Status = 'InLocked' where Name = @UserName And Password = @Password  
+			Insert into LockedUser(ID_User) Select ID from Users where Name = @UserName And Password = @Password
 			Return @msg End
 End
 Declare @status int
@@ -67,5 +68,9 @@ Execute Authentification 'Hamza Semmak', 'aa102374', @status Output
 Select @status
 
 
-Select *  from Users;
-Select *  from FormersType;
+Select * from Users;
+Select * from FormersType;
+Select * from LockedUser;
+
+
+Delete from LockedUser;

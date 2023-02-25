@@ -195,7 +195,7 @@
             this.guna2GroupBox8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2GroupBox8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox8.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox8.Location = new System.Drawing.Point(15, 320);
+            this.guna2GroupBox8.Location = new System.Drawing.Point(15, 336);
             this.guna2GroupBox8.Name = "guna2GroupBox8";
             this.guna2GroupBox8.Size = new System.Drawing.Size(219, 83);
             this.guna2GroupBox8.TabIndex = 17;
@@ -249,7 +249,7 @@
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(15, 409);
+            this.guna2Button4.Location = new System.Drawing.Point(15, 425);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(219, 45);
             this.guna2Button4.TabIndex = 0;
@@ -269,7 +269,7 @@
             this.guna2GroupBox7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2GroupBox7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox7.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox7.Location = new System.Drawing.Point(15, 231);
+            this.guna2GroupBox7.Location = new System.Drawing.Point(15, 247);
             this.guna2GroupBox7.Name = "guna2GroupBox7";
             this.guna2GroupBox7.Size = new System.Drawing.Size(219, 83);
             this.guna2GroupBox7.TabIndex = 16;
@@ -322,7 +322,7 @@
             this.guna2GroupBox6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2GroupBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox6.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox6.Location = new System.Drawing.Point(15, 142);
+            this.guna2GroupBox6.Location = new System.Drawing.Point(15, 158);
             this.guna2GroupBox6.Name = "guna2GroupBox6";
             this.guna2GroupBox6.Size = new System.Drawing.Size(219, 83);
             this.guna2GroupBox6.TabIndex = 15;
@@ -375,7 +375,7 @@
             this.guna2GroupBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2GroupBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox5.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox5.Location = new System.Drawing.Point(15, 53);
+            this.guna2GroupBox5.Location = new System.Drawing.Point(15, 69);
             this.guna2GroupBox5.Name = "guna2GroupBox5";
             this.guna2GroupBox5.Size = new System.Drawing.Size(219, 83);
             this.guna2GroupBox5.TabIndex = 14;

@@ -1,0 +1,53 @@
+2023-02-25 00:10:28,219 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:10:28,323 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:10:50,756 [1] [ERROR] Student_Management.Program: Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+2023-02-25 00:10:50,756 [1] [ERROR] Student_Management.Program: Error : Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated. 
+2023-02-25 00:10:59,949 [1] [ERROR] Student_Management.Program: Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+2023-02-25 00:10:59,949 [1] [ERROR] Student_Management.Program: Error : Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated. 
+2023-02-25 00:11:10,331 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-25 00:11:10,331 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-25 00:12:10,161 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:12:10,321 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:12:26,367 [1] [ERROR] Student_Management.Program: Error : Error 40202 : Password is is incorrect, Please try again 
+2023-02-25 00:12:29,743 [1] [ERROR] Student_Management.Program: Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+2023-02-25 00:12:29,743 [1] [ERROR] Student_Management.Program: Error : Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated. 
+2023-02-25 00:12:37,193 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-25 00:12:37,208 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-25 00:14:14,982 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:14:15,122 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:14:30,637 [1] [ERROR] Student_Management.Program: Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+2023-02-25 00:14:30,652 [1] [ERROR] Student_Management.Program: Error : Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated. 
+2023-02-25 00:14:34,195 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-25 00:14:34,195 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-25 00:15:24,434 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:15:24,575 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:15:39,349 [1] [ERROR] Student_Management.Program: Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+2023-02-25 00:15:39,364 [1] [ERROR] Student_Management.Program: Error : Cannot insert the value NULL into column 'ID', table 'Student_Management.dbo.LockedUser'; column does not allow nulls. INSERT fails.
+The statement has been terminated. 
+2023-02-25 00:15:42,269 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-25 00:15:42,269 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-25 00:17:09,211 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:17:09,321 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:17:24,583 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-02-25 00:17:34,876 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-25 00:17:34,876 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-25 00:20:53,283 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:20:53,412 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:21:08,110 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-02-25 00:21:23,392 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-25 00:21:23,392 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-25 00:22:52,810 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-25 00:22:52,966 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-25 00:23:08,308 [1] [ERROR] Student_Management.Program: ID
+2023-02-25 00:23:08,316 [1] [ERROR] Student_Management.Program: Error : ID 
