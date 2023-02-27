@@ -22,10 +22,17 @@ namespace Student_Management.IHM_s
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            if (!(sender as Control).Enabled)
+                return;
+            authentification();
+        }
+
+        private void authentification()
+        {
             string message = string.Empty;
             try
             {
-                if(guna2TextBox1.Text == "" || guna2TextBox2.Text == "")
+                if (guna2TextBox1.Text == "" || guna2TextBox2.Text == "")
                 {
                     message = "There is an Empty field";
                     Program.LaunchAlertForm(message);
@@ -38,17 +45,17 @@ namespace Student_Management.IHM_s
                         message = $"Error {status} : UserName is incorrect, Please try again";
                         Program.LaunchAlertForm(message);
                     }
-                    else if(status == ResponseStatus.ResponseCodeIncorrectPassword)
+                    else if (status == ResponseStatus.ResponseCodeIncorrectPassword)
                     {
                         message = $"Error {status} : Password is is incorrect, Please try again";
                         Program.LaunchAlertForm(message);
                     }
-                    else if(status == ResponseStatus.ResponseCodeLockedAccount)
+                    else if (status == ResponseStatus.ResponseCodeLockedAccount)
                     {
                         message = $"Error {status} : Your account is locked, contact your administrator";
                         Program.LaunchAlertForm(message);
                     }
-                    else if(status == ResponseStatus.ResponseCodeAuth)
+                    else if (status == ResponseStatus.ResponseCodeAuth)
                     {
                         this.Hide();
                         Program.LaunchPrincipalForm();
@@ -57,11 +64,11 @@ namespace Student_Management.IHM_s
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Program.logger.Error(ex.Message);
                 Program.LaunchAlertForm(ex.Message);
-            } 
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

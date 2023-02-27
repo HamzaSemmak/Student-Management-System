@@ -1,0 +1,54 @@
+2023-02-27 00:09:17,804 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:09:17,942 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:09:33,006 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 00:09:38,001 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 00:09:38,001 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 00:17:10,151 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:17:10,334 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:17:27,558 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 00:25:24,579 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:25:24,756 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:25:59,526 [1] [ERROR] Student_Management.Program: Incorrect syntax near '8'.
+2023-02-27 00:25:59,534 [1] [ERROR] Student_Management.Program: Error : Incorrect syntax near '8'. 
+2023-02-27 00:26:31,275 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:26:31,384 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:27:01,994 [1] [ERROR] Student_Management.Program: Incorrect syntax near '8'.
+2023-02-27 00:27:02,000 [1] [ERROR] Student_Management.Program: Error : Incorrect syntax near '8'. 
+2023-02-27 00:28:43,890 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:28:44,021 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:28:59,850 [1] [ERROR] Student_Management.Program: Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated.
+2023-02-27 00:28:59,856 [1] [ERROR] Student_Management.Program: Error : Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated. 
+2023-02-27 00:29:18,433 [1] [ERROR] Student_Management.Program: Incorrect syntax near '8'.
+2023-02-27 00:29:18,436 [1] [ERROR] Student_Management.Program: Error : Incorrect syntax near '8'. 
+2023-02-27 00:30:31,706 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:30:31,887 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:30:46,671 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 00:31:04,512 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 00:31:04,512 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 00:31:34,699 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:31:34,878 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:32:01,996 [1] [ERROR] Student_Management.Program: Incorrect syntax near '8'.
+2023-02-27 00:32:02,667 [1] [ERROR] Student_Management.Program: Error : Incorrect syntax near '8'. 
+2023-02-27 00:35:47,957 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:35:48,130 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:36:02,028 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 00:36:07,456 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 00:36:07,456 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 00:36:13,185 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:36:13,316 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:36:28,379 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : Test1}
+2023-02-27 00:36:38,252 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 00:36:38,252 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 00:37:22,212 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 00:37:22,353 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 00:37:36,220 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 00:37:54,272 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 00:37:54,272 [1] [INFO ] Student_Management.Program: Exit Application Student Management System

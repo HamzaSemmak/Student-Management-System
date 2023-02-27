@@ -24,7 +24,7 @@ Create Table Users (
 );
 
 Create Table LockedUser (
-	ID int primary key identity(1,1),
+	ID int primary key,
 	ID_User int foreign key references Users(ID)
 );
 
@@ -34,7 +34,7 @@ Create Table FormersType(
 );
 
 /* Insertion */
-insert into FormersType values('Teacher'),('Directeur of School'),('General guard'),('Security'),('Driver');
+insert into FormersType values('Teacher'),('Directeur of School'),('General guard'),('Security'),('Driver'),('Director assistance');
 
 /* Procedure Stocke */
 Create Procedure Authentification
@@ -45,6 +45,7 @@ Create Procedure Authentification
 )
 As
 Begin 
+	Declare @ID int
 	If Exists (Select COUNT(*) from Users where Name = @UserName Having COUNT(*) = 0 )
 		Begin Set @msg = 40201 /* UserName and Password is Incorrect */
 		Return @msg End
@@ -59,12 +60,14 @@ Begin
 			Return @msg End
 		Else If Exists (Select * from Users where Name = @UserName And Password = @Password)
 			Begin Set @msg = 40200 /* UserName and Password Corrrect */
-			Update Users Set Checks = 1, Status = 'InLocked' where Name = @UserName And Password = @Password  
-			Insert into LockedUser(ID_User) Select ID from Users where Name = @UserName And Password = @Password
+			Select @ID = ID from Users where Name = @UserName And Password = @Password;
+			Insert into LockedUser(ID, ID_User) Values(@ID, @ID)
+			Update Users Set Checks = 1, Status = 'InLocked' where Name = @UserName And Password = @Password
+			
 			Return @msg End
 End
 Declare @status int
-Execute Authentification 'Hamza Semmak', 'aa102374', @status Output
+Execute Authentification 'Hamza Semmak', 'test1', @status Output
 Select @status
 
 

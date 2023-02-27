@@ -4,26 +4,15 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using TheArtOfDevHtmlRenderer.Adapters.Entities;
+using System.Collections;
+using System.Linq;
+using Guna.UI2.WinForms;
 
 namespace Student_Management.Modules.UserModel.Controller
 {
     public class UsersController : Users
     {
         public UsersController() { }
-        public string GenerateMatricule(int size, bool lowerCase)
-        {
-            StringBuilder builder = new StringBuilder();
-            Random random = new Random();
-            char ch;
-            for (int i = 0; i < size; i++)
-            {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
-            }
-            if (lowerCase)
-                return builder.ToString().ToLower();
-            return builder.ToString();
-        }
 
         public int Authentification(string newName, string newPassword)
         {
@@ -57,56 +46,73 @@ namespace Student_Management.Modules.UserModel.Controller
             this.sqlCommand.Parameters.Add(P1);
             this.sqlCommand.Parameters.Add(P2);
             this.sqlCommand.Parameters.Add(Output);
-            OpenConnection();
+            this.OpenConnection();
             this.sqlCommand.ExecuteNonQuery();
-            CloseConnection();
+            this.CloseConnection();
             return Convert.ToInt32(Output.Value);
         }
 
-        public int UserID()
+        public int GetUserID()
         {
-            this.sqlConnection = new SqlConnection(this.ConnectionString);
-            string Query = "Select ID_User from LockedUser";
             int ID = 0;
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select * from LockedUser;";
             this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
-            OpenConnection();
+            this.OpenConnection();
             this.sqlDataReader = this.sqlCommand.ExecuteReader();
             if(this.sqlDataReader.Read())
             {
                 ID = Convert.ToInt32(this.sqlDataReader["ID"]);
             }
-            CloseConnection();
+            this.CloseConnection();
             return ID;
         }
 
-        public string[] GetUserInformation()
+        public string[] UserLocked(int ID)
         {
-            string[] User = new string[2];
+            string[] Result = new string[2];
             this.sqlConnection = new SqlConnection(this.ConnectionString);
-            string Query = $"Select * from Users where ID = {UserID()}";
+            string Query = $"Select * from Users where ID = {ID}";
             this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
-            OpenConnection();
+            this.OpenConnection();
             this.sqlDataReader = this.sqlCommand.ExecuteReader();
-            if (this.sqlDataReader.Read())
+            if(this.sqlDataReader.Read())
             {
-                User[0] = Convert.ToString(this.sqlDataReader["Name"]);
-                User[1] = Convert.ToString(this.sqlDataReader["UserType"]);
+                Result[0] = Convert.ToString(this.sqlDataReader["Name"]);
+                Result[1] = Convert.ToString(this.sqlDataReader["FormerType"]);
             }
-            CloseConnection();
+            this.CloseConnection();
 
-            return User;
+            return Result;
         }
 
-        public void Disconnected()
+        public void forgetUser()
         {
             this.sqlConnection = new SqlConnection(this.ConnectionString);
-            string Query = $"Delete from LockedUser where ID_User = {UserID()}";
+            string Query = $"Delete from LockedUser;";
             this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
-            OpenConnection();
+            this.OpenConnection();
             this.sqlCommand.ExecuteNonQuery();
-            Program.logger.Info("Test Passed Successfly");
-            Program.logger.Info($"ID : {UserID()} ");
-            CloseConnection();
+            this.CloseConnection();
+        }
+
+        public Users GetUsersWithLimit(Guna2DataGridView DataGridView, int CountOfRows)
+        {
+            Users users = new Users();
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select Top {CountOfRows} * from Users";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if(this.sqlDataReader.HasRows)
+            {
+                while(this.sqlDataReader.Read())
+                {
+                    DataGridView.Rows.Add(this.sqlDataReader["Matricule"], this.sqlDataReader["Name"], this.sqlDataReader["FormerType"], this.sqlDataReader["DateNaissance"]);
+                }
+            }
+            this.CloseConnection();
+            return users;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Student_Management.Modules.UserModel.Model
         protected string adress;
         protected string formerType;
         protected string userType;
-        protected string status;
+        protected string status; 
         protected int checks;
 
         public string Matricule { get => matricule; set => matricule = value; }
