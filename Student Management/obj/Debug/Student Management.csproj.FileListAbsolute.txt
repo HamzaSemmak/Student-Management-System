@@ -50,4 +50,4 @@ C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.csproj.CopyComplete
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.exe
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.pdb
-C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.FailAlert.resources
+C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm.resources

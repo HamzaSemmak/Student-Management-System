@@ -74,6 +74,5 @@ Select @status
 Select * from Users;
 Select * from FormersType;
 Select * from LockedUser;
-
-
 Delete from LockedUser;
+Select Count(*) from Users;

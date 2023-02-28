@@ -52,3 +52,28 @@ The statement has been terminated.
 {Info: 40200, UserName: Hamza Semmak, Password : test1}
 2023-02-27 00:37:54,272 [1] [INFO ] Student_Management.Program: DisConnect...
 2023-02-27 00:37:54,272 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 22:28:30,197 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 22:28:30,601 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 22:28:45,681 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 22:29:02,831 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 22:29:02,831 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 23:49:29,880 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 23:49:30,105 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 23:49:46,873 [1] [INFO ] Student_Management.Program: This is Test Of Users : 
+System.Collections.Generic.List`1[Student_Management.Modules.UserModel.Model.Users]
+2023-02-27 23:49:46,951 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 23:50:11,443 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 23:50:11,443 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 23:51:13,563 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 23:51:13,675 [1] [INFO ] Student_Management.Program: Connect...
+2023-02-27 23:51:29,474 [1] [INFO ] Student_Management.Program: Test Users :
+2023-02-27 23:51:29,476 [1] [INFO ] Student_Management.Program: This is Test Of Users : 
+System.Collections.Generic.List`1[Student_Management.Modules.UserModel.Model.Users]
+2023-02-27 23:51:29,552 [1] [INFO ] Student_Management.Program: Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-27 23:51:42,679 [1] [INFO ] Student_Management.Program: DisConnect...
+2023-02-27 23:51:42,679 [1] [INFO ] Student_Management.Program: Exit Application Student Management System
+2023-02-27 23:59:46,355 [1] [INFO ] Student_Management.Program: Start Application Student Management System
+2023-02-27 23:59:46,987 [1] [INFO ] Student_Management.Program: Connect...

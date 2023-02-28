@@ -12,7 +12,7 @@ namespace Student_Management.Modules.LoggerManager
         private static ILog logger;
         private static ConsoleAppender ConsoleAppender;
         private static RollingFileAppender RollingFileAppender;
-        private static string layout = "%date [%thread] [%-5level] %logger: %message%newline";
+        private static string layout = "%date [%-5level] [%thread] %class - %message%newline";
 
         public static string Layout { set => layout = value; }
 

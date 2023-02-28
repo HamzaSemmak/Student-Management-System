@@ -7,6 +7,7 @@ using TheArtOfDevHtmlRenderer.Adapters.Entities;
 using System.Collections;
 using System.Linq;
 using Guna.UI2.WinForms;
+using System.Collections.Generic;
 
 namespace Student_Management.Modules.UserModel.Controller
 {
@@ -96,9 +97,9 @@ namespace Student_Management.Modules.UserModel.Controller
             this.CloseConnection();
         }
 
-        public Users GetUsersWithLimit(Guna2DataGridView DataGridView, int CountOfRows)
+        public List<Users> GetUsersWithLimit(int CountOfRows)
         {
-            Users users = new Users();
+            List<Users> Users = new List<Users>();
             this.sqlConnection = new SqlConnection(this.ConnectionString);
             string Query = $"Select Top {CountOfRows} * from Users";
             this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
@@ -108,11 +109,43 @@ namespace Student_Management.Modules.UserModel.Controller
             {
                 while(this.sqlDataReader.Read())
                 {
-                    DataGridView.Rows.Add(this.sqlDataReader["Matricule"], this.sqlDataReader["Name"], this.sqlDataReader["FormerType"], this.sqlDataReader["DateNaissance"]);
+                    Users.Add(new Users(
+                        Convert.ToString(this.sqlDataReader["Matricule"]),
+                        Convert.ToString(this.sqlDataReader["Name"]),
+                        Convert.ToString(this.sqlDataReader["Password"]),
+                        Convert.ToString(this.sqlDataReader["Phone"]),
+                        Convert.ToString(this.sqlDataReader["DateNaissance"]),
+                        Convert.ToInt32(this.sqlDataReader["Age"]),
+                        Convert.ToString(this.sqlDataReader["Adresse"]),
+                        Convert.ToString(this.sqlDataReader["FormerType"]),
+                        Convert.ToString(this.sqlDataReader["UserType"])
+                    ));
                 }
             }
             this.CloseConnection();
-            return users;
+            return Users;
+        }
+
+        public int GetNumbersOfUser()
+        {
+            int Count = 0;
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select Count(*) from Users";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if(this.sqlDataReader.HasRows) 
+            {
+                if(this.sqlDataReader.Read())
+                {
+                    Count = Convert.ToInt32(this.sqlDataReader[0]);
+                }
+            }
+            else
+            {
+                Count = 0;
+            }
+            return Count;
         }
     }
 }

@@ -15,10 +15,11 @@ namespace Student_Management.IHM_s.ComposentsGraphique
 {
     public partial class LoadingForm : Form
     {
+        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Program));
         public LoadingForm()
         {
             InitializeComponent();
-            Program.logger.Info("Connect...");
+            logger.Info("Connect...");
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

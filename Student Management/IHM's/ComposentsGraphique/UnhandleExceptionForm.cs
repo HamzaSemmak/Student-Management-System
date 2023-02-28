@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Student_Management.IHM_s.ComposentsGraphique
 {
-    public partial class FailAlert : Form
+    public partial class UnhandleExceptionForm : Form
     {
-        public FailAlert(string Msg)
+        public UnhandleExceptionForm(string Msg)
         {
             InitializeComponent();
             this.label2.Text = $"{Msg.ToString()}";

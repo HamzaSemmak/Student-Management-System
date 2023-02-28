@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             this.Principal = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -98,9 +98,13 @@
             this.guna2GroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.guna2GroupBox4.SuspendLayout();
+            this.guna2CircleProgressBar1.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
+            this.SubjectProgressBar.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            this.FormersProgressBar.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
+            this.StudentsProgressBar.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -142,33 +146,34 @@
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             this.guna2DataGridView1.AllowUserToResizeColumns = false;
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.ColumnHeadersHeight = 40;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(104, 361);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
@@ -187,7 +192,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 40;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,24 +206,28 @@
             this.Column1.HeaderText = "Matricule";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Former Type";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Date Naissance";
+            this.Column4.HeaderText = "Phone";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // label9
             // 
@@ -464,7 +473,6 @@
             this.guna2GroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox4.BorderRadius = 20;
             this.guna2GroupBox4.BorderThickness = 0;
-            this.guna2GroupBox4.Controls.Add(this.label7);
             this.guna2GroupBox4.Controls.Add(this.guna2CircleProgressBar1);
             this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -480,20 +488,22 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(96, 67);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 19);
+            this.label7.Size = new System.Drawing.Size(34, 37);
             this.label7.TabIndex = 12;
-            this.label7.Text = "XXX";
+            this.label7.Text = "0";
             // 
             // guna2CircleProgressBar1
             // 
             this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.guna2CircleProgressBar1.Controls.Add(this.label7);
             this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2CircleProgressBar1.FillThickness = 7;
             this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(13, 48);
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(45, 41);
             this.guna2CircleProgressBar1.Minimum = 0;
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.White;
@@ -502,7 +512,7 @@
             this.guna2CircleProgressBar1.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.guna2CircleProgressBar1.ProgressThickness = 7;
             this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(78, 78);
             this.guna2CircleProgressBar1.TabIndex = 10;
             this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.Value = 50;
@@ -512,7 +522,6 @@
             this.guna2GroupBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox3.BorderRadius = 20;
             this.guna2GroupBox3.BorderThickness = 0;
-            this.guna2GroupBox3.Controls.Add(this.label6);
             this.guna2GroupBox3.Controls.Add(this.SubjectProgressBar);
             this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -528,20 +537,22 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(101, 67);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(22, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 19);
+            this.label6.Size = new System.Drawing.Size(34, 37);
             this.label6.TabIndex = 12;
-            this.label6.Text = "XXX";
+            this.label6.Text = "0";
             // 
             // SubjectProgressBar
             // 
             this.SubjectProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.SubjectProgressBar.Controls.Add(this.label6);
             this.SubjectProgressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.SubjectProgressBar.FillThickness = 7;
             this.SubjectProgressBar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.SubjectProgressBar.ForeColor = System.Drawing.Color.Transparent;
-            this.SubjectProgressBar.Location = new System.Drawing.Point(13, 48);
+            this.SubjectProgressBar.Location = new System.Drawing.Point(43, 41);
             this.SubjectProgressBar.Minimum = 0;
             this.SubjectProgressBar.Name = "SubjectProgressBar";
             this.SubjectProgressBar.ProgressColor = System.Drawing.Color.White;
@@ -550,7 +561,7 @@
             this.SubjectProgressBar.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.SubjectProgressBar.ProgressThickness = 7;
             this.SubjectProgressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.SubjectProgressBar.Size = new System.Drawing.Size(55, 55);
+            this.SubjectProgressBar.Size = new System.Drawing.Size(78, 78);
             this.SubjectProgressBar.TabIndex = 10;
             this.SubjectProgressBar.Text = "guna2CircleProgressBar1";
             this.SubjectProgressBar.Value = 50;
@@ -560,7 +571,6 @@
             this.guna2GroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox2.BorderRadius = 20;
             this.guna2GroupBox2.BorderThickness = 0;
-            this.guna2GroupBox2.Controls.Add(this.label5);
             this.guna2GroupBox2.Controls.Add(this.FormersProgressBar);
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -576,20 +586,22 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(99, 67);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 19);
+            this.label5.Size = new System.Drawing.Size(34, 37);
             this.label5.TabIndex = 11;
-            this.label5.Text = "XXX";
+            this.label5.Text = "x";
             // 
             // FormersProgressBar
             // 
             this.FormersProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.FormersProgressBar.Controls.Add(this.label5);
             this.FormersProgressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.FormersProgressBar.FillThickness = 7;
             this.FormersProgressBar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.FormersProgressBar.ForeColor = System.Drawing.Color.Transparent;
-            this.FormersProgressBar.Location = new System.Drawing.Point(12, 48);
+            this.FormersProgressBar.Location = new System.Drawing.Point(32, 41);
             this.FormersProgressBar.Minimum = 0;
             this.FormersProgressBar.Name = "FormersProgressBar";
             this.FormersProgressBar.ProgressColor = System.Drawing.Color.White;
@@ -598,7 +610,7 @@
             this.FormersProgressBar.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.FormersProgressBar.ProgressThickness = 7;
             this.FormersProgressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.FormersProgressBar.Size = new System.Drawing.Size(55, 55);
+            this.FormersProgressBar.Size = new System.Drawing.Size(78, 78);
             this.FormersProgressBar.TabIndex = 10;
             this.FormersProgressBar.Text = "guna2CircleProgressBar1";
             this.FormersProgressBar.Value = 50;
@@ -608,7 +620,6 @@
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox1.BorderRadius = 20;
             this.guna2GroupBox1.BorderThickness = 0;
-            this.guna2GroupBox1.Controls.Add(this.label4);
             this.guna2GroupBox1.Controls.Add(this.StudentsProgressBar);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -624,20 +635,22 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(102, 67);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 19);
+            this.label4.Size = new System.Drawing.Size(34, 37);
             this.label4.TabIndex = 10;
-            this.label4.Text = "XXX";
+            this.label4.Text = "0";
             // 
             // StudentsProgressBar
             // 
             this.StudentsProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.StudentsProgressBar.Controls.Add(this.label4);
             this.StudentsProgressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.StudentsProgressBar.FillThickness = 7;
             this.StudentsProgressBar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.StudentsProgressBar.ForeColor = System.Drawing.Color.Transparent;
-            this.StudentsProgressBar.Location = new System.Drawing.Point(15, 48);
+            this.StudentsProgressBar.Location = new System.Drawing.Point(38, 41);
             this.StudentsProgressBar.Minimum = 0;
             this.StudentsProgressBar.Name = "StudentsProgressBar";
             this.StudentsProgressBar.ProgressColor = System.Drawing.Color.White;
@@ -646,7 +659,7 @@
             this.StudentsProgressBar.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.StudentsProgressBar.ProgressThickness = 7;
             this.StudentsProgressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.StudentsProgressBar.Size = new System.Drawing.Size(55, 55);
+            this.StudentsProgressBar.Size = new System.Drawing.Size(78, 78);
             this.StudentsProgressBar.TabIndex = 9;
             this.StudentsProgressBar.Text = "guna2CircleProgressBar1";
             this.StudentsProgressBar.Value = 50;
@@ -915,13 +928,17 @@
             this.guna2GroupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.guna2GroupBox4.ResumeLayout(false);
-            this.guna2GroupBox4.PerformLayout();
+            this.guna2CircleProgressBar1.ResumeLayout(false);
+            this.guna2CircleProgressBar1.PerformLayout();
             this.guna2GroupBox3.ResumeLayout(false);
-            this.guna2GroupBox3.PerformLayout();
+            this.SubjectProgressBar.ResumeLayout(false);
+            this.SubjectProgressBar.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
-            this.guna2GroupBox2.PerformLayout();
+            this.FormersProgressBar.ResumeLayout(false);
+            this.FormersProgressBar.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox1.PerformLayout();
+            this.StudentsProgressBar.ResumeLayout(false);
+            this.StudentsProgressBar.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);

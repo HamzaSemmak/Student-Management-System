@@ -1,0 +1,88 @@
+2023-02-28 00:06:39,865 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:06:40,071 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:06:59,620 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - {Student_Management.Modules.UserModel.Model.Users, Student_Management.Modules.UserModel.Model.Users, Student_Management.Modules.UserModel.Model.Users, Student_Management.Modules.UserModel.Model.Users, Student_Management.Modules.UserModel.Model.Users, Student_Management.Modules.UserModel.Model.Users, Student_Management.Modules.UserModel.Model.Users}
+2023-02-28 00:06:59,698 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:07:39,032 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-02-28 00:07:39,032 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-02-28 00:08:13,895 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:08:14,211 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:08:34,751 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Users Test Passed With Success
+2023-02-28 00:08:34,835 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:08:47,322 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-02-28 00:08:47,322 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-02-28 00:10:03,706 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:10:03,883 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:10:19,798 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:10:21,873 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-02-28 00:10:21,874 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-02-28 00:18:14,276 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:18:14,490 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:18:29,825 [ERROR] [1] Student_Management.IHM_s.Authentification - Count(*)
+2023-02-28 00:18:29,832 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Count(*) 
+2023-02-28 00:19:15,201 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:19:15,443 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:19:31,420 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:25:25,927 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:25:26,107 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:25:43,578 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Error 40202 : Password is is incorrect, Please try again 
+2023-02-28 00:25:49,061 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:33:37,796 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:33:37,949 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:33:52,460 [ERROR] [1] Student_Management.IHM_s.Authentification - Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated.
+2023-02-28 00:33:52,470 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated. 
+2023-02-28 00:34:02,254 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : TEST1}
+2023-02-28 00:41:30,064 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:41:30,265 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:41:47,811 [ERROR] [1] Student_Management.IHM_s.Authentification - Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated.
+2023-02-28 00:41:47,820 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated. 
+2023-02-28 00:42:05,771 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Error 40202 : Password is is incorrect, Please try again 
+2023-02-28 00:42:11,877 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:42:58,474 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:42:58,670 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:43:19,560 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:43:44,392 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:43:44,544 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:44:11,757 [ERROR] [1] Student_Management.IHM_s.Authentification - Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated.
+2023-02-28 00:44:11,767 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated. 
+2023-02-28 00:44:19,861 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:44:38,815 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:44:38,993 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:44:53,965 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:45:40,644 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:45:40,799 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:45:59,439 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:47:03,320 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:47:03,530 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:47:20,437 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:47:41,106 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:47:41,263 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:47:56,022 [ERROR] [1] Student_Management.IHM_s.Authentification - Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated.
+2023-02-28 00:47:56,029 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Violation of PRIMARY KEY constraint 'PK__LockedUs__3214EC279315EBDC'. Cannot insert duplicate key in object 'dbo.LockedUser'. The duplicate key value is (1).
+The statement has been terminated. 
+2023-02-28 00:48:08,263 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:50:27,346 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-02-28 00:50:27,597 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-02-28 00:50:46,693 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : test1}
+2023-02-28 00:50:52,394 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-02-28 00:50:52,395 [INFO ] [1] Student_Management.Program - Exit Application Student Management System

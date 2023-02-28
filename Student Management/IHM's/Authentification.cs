@@ -9,6 +9,7 @@ namespace Student_Management.IHM_s
 {
     public partial class Authentification : Form
     {
+        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Program));
         public UsersController User;
         public ResponseStatus ResponseStatus;
         public Authentification()
@@ -59,14 +60,14 @@ namespace Student_Management.IHM_s
                     {
                         this.Hide();
                         Program.LaunchPrincipalForm();
-                        Program.logger.Info("Logged Successfly, Information : \n{Info: " + status + ", UserName: " + guna2TextBox1.Text + ", Password : " + guna2TextBox2.Text + "}");
+                        logger.Info("Logged Successfly, Information : \n{Info: " + status + ", UserName: " + guna2TextBox1.Text + ", Password : " + guna2TextBox2.Text + "}");
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                Program.logger.Error(ex.Message);
+                logger.Error(ex.Message);
                 Program.LaunchAlertForm(ex.Message);
             }
         }

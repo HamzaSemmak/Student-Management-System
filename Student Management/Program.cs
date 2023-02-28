@@ -15,7 +15,7 @@ namespace Student_Management
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
-        public static ILog logger = Log4NetManager.GetLogger(typeof(Program));
+        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Program));
 
         public static LoadingForm _Splash()
         {
@@ -45,8 +45,8 @@ namespace Student_Management
 
         public static void LaunchAlertForm(string message)
         {
-            FailAlert _Alert = new FailAlert(message);
-            _Alert.Show();
+            UnhandleExceptionForm _UnhandleExceptionForm = new UnhandleExceptionForm(message);
+            _UnhandleExceptionForm.Show();
         }
 
         [STAThread]
