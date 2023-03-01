@@ -70,7 +70,26 @@ Declare @status int
 Execute Authentification 'Hamza Semmak', 'test1', @status Output
 Select @status
 
+Create Procedure CheckUserIfAdmin
+(
+	@ID int, 
+	@msg int Out
+)
+As
+Begin 
+	If Exists (Select COUNT(*) from Users where ID = @ID Having COUNT(*) = 0 )
+		Begin Set @msg = 40210 Return @msg End /* User Dons't Esict */
+	Else
+		If Exists (Select * from Users where ID = @ID and UserType = 'Admin')
+			Begin Set @msg = 40211 Return @msg End /*User is Admin */
+		Else 
+			Begin Set @msg = 40212 Return @msg End /*User is User */
+End
+Declare @status int
+Execute CheckUserIfAdmin 9, @status Output
+Select @status
 
+/* */	
 Select * from Users;
 Select * from FormersType;
 Select * from LockedUser;

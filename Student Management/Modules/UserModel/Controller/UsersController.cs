@@ -66,6 +66,7 @@ namespace Student_Management.Modules.UserModel.Controller
                 ID = Convert.ToInt32(this.sqlDataReader["ID"]);
             }
             this.CloseConnection();
+
             return ID;
         }
 
@@ -96,6 +97,35 @@ namespace Student_Management.Modules.UserModel.Controller
             this.sqlCommand.ExecuteNonQuery();
             this.CloseConnection();
         }
+        public List<Users> AllUsers()
+        {
+            List<Users> Users = new List<Users>();
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select * from Users";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if (this.sqlDataReader.HasRows)
+            {
+                while (this.sqlDataReader.Read())
+                {
+                    Users.Add(new Users(
+                        Convert.ToString(this.sqlDataReader["Matricule"]),
+                        Convert.ToString(this.sqlDataReader["Name"]),
+                        Convert.ToString(this.sqlDataReader["Password"]),
+                        Convert.ToString(this.sqlDataReader["Phone"]),
+                        Convert.ToString(this.sqlDataReader["DateNaissance"]),
+                        Convert.ToInt32(this.sqlDataReader["Age"]),
+                        Convert.ToString(this.sqlDataReader["Adresse"]),
+                        Convert.ToString(this.sqlDataReader["FormerType"]),
+                        Convert.ToString(this.sqlDataReader["UserType"])
+                    ));
+                }
+            }
+            this.CloseConnection();
+            return Users;
+        }
+
 
         public List<Users> GetUsersWithLimit(int CountOfRows)
         {
@@ -126,6 +156,36 @@ namespace Student_Management.Modules.UserModel.Controller
             return Users;
         }
 
+        public List<Users> GetUserByColumn(string Column, string Value)
+        {
+            List<Users> Users = new List<Users>();
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select * from Users Where {Column} = '{Value}'";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if (this.sqlDataReader.HasRows)
+            {
+                while (this.sqlDataReader.Read())
+                {
+                    Users.Add(new Users(
+                        Convert.ToString(this.sqlDataReader["Matricule"]),
+                        Convert.ToString(this.sqlDataReader["Name"]),
+                        Convert.ToString(this.sqlDataReader["Password"]),
+                        Convert.ToString(this.sqlDataReader["Phone"]),
+                        Convert.ToString(this.sqlDataReader["DateNaissance"]),
+                        Convert.ToInt32(this.sqlDataReader["Age"]),
+                        Convert.ToString(this.sqlDataReader["Adresse"]),
+                        Convert.ToString(this.sqlDataReader["FormerType"]),
+                        Convert.ToString(this.sqlDataReader["UserType"])
+                    ));
+                }
+            }
+            this.CloseConnection();
+
+            return Users;
+        }
+
         public int GetNumbersOfUser()
         {
             int Count = 0;
@@ -146,6 +206,37 @@ namespace Student_Management.Modules.UserModel.Controller
                 Count = 0;
             }
             return Count;
+        }
+
+        public int CheckUserIfAdmin(int ID)
+        {
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            this.sqlCommand = new SqlCommand()
+            {
+                CommandText = "CheckUserIfAdmin",
+                Connection = this.sqlConnection,
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter Param1 = new SqlParameter()
+            {
+                ParameterName = "@ID",
+                SqlDbType = SqlDbType.Int,
+                Value = ID,
+                Direction = ParameterDirection.Input
+            };
+            SqlParameter Output = new SqlParameter()
+            {
+                ParameterName = "@msg",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Output
+            };
+            this.sqlCommand.Parameters.Add(Param1);
+            this.sqlCommand.Parameters.Add(Output);
+            this.OpenConnection();
+            this.sqlCommand.ExecuteNonQuery();
+            this.CloseConnection();
+
+            return Convert.ToInt32(Output.Value);
         }
     }
 }

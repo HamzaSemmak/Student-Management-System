@@ -12,6 +12,9 @@ namespace Student_Management.Modules.Config
         private int responseCodeLockedAccount = 40203;
         private int responseCodeIncorrectPassword = 40202;
         private int responseCodeAuth = 40200;
+        private int responseCodeUserIsUndefiend = 40210;
+        private int responseCodeUserIsAdmin = 40211;
+        private int responseCodeUserIsNotAdmin = 40212;
 
         public ResponseStatus() 
         {
@@ -22,5 +25,8 @@ namespace Student_Management.Modules.Config
         public int ResponseCodeLockedAccount { get => responseCodeLockedAccount; set => responseCodeLockedAccount = value; }
         public int ResponseCodeIncorrectPassword { get => responseCodeIncorrectPassword; set => responseCodeIncorrectPassword = value; }
         public int ResponseCodeAuth { get => responseCodeAuth; set => responseCodeAuth = value; }
+        public int ResponseCodeUserIsUndefiend { get => responseCodeUserIsUndefiend; set => responseCodeUserIsUndefiend = value; }
+        public int ResponseCodeUserIsAdmin { get => responseCodeUserIsAdmin; set => responseCodeUserIsAdmin = value; }
+        public int ResponseCodeUserIsNotAdmin { get => responseCodeUserIsNotAdmin; set => responseCodeUserIsNotAdmin = value; }
     }
 }

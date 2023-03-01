@@ -36,7 +36,7 @@ namespace Student_Management.IHM_s
                 if (guna2TextBox1.Text == "" || guna2TextBox2.Text == "")
                 {
                     message = "There is an Empty field";
-                    Program.LaunchAlertForm(message);
+                    Program.LaunchUnhandleExceptionForm(message);
                 }
                 else
                 {
@@ -44,17 +44,17 @@ namespace Student_Management.IHM_s
                     if (status == ResponseStatus.ResponseCodeIncorrectUserName)
                     {
                         message = $"Error {status} : UserName is incorrect, Please try again";
-                        Program.LaunchAlertForm(message);
+                        Program.LaunchUnhandleExceptionForm(message);
                     }
                     else if (status == ResponseStatus.ResponseCodeIncorrectPassword)
                     {
                         message = $"Error {status} : Password is is incorrect, Please try again";
-                        Program.LaunchAlertForm(message);
+                        Program.LaunchUnhandleExceptionForm(message);
                     }
                     else if (status == ResponseStatus.ResponseCodeLockedAccount)
                     {
                         message = $"Error {status} : Your account is locked, contact your administrator";
-                        Program.LaunchAlertForm(message);
+                        Program.LaunchUnhandleExceptionForm(message);
                     }
                     else if (status == ResponseStatus.ResponseCodeAuth)
                     {
@@ -68,7 +68,7 @@ namespace Student_Management.IHM_s
             catch (Exception ex)
             {
                 logger.Error(ex.Message);
-                Program.LaunchAlertForm(ex.Message);
+                Program.LaunchUnhandleExceptionForm(ex.Message);
             }
         }
 

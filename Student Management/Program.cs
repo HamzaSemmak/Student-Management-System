@@ -43,10 +43,16 @@ namespace Student_Management
             principalForm.Show();
         }
 
-        public static void LaunchAlertForm(string message)
+        public static void LaunchUnhandleExceptionForm(string message)
         {
             UnhandleExceptionForm _UnhandleExceptionForm = new UnhandleExceptionForm(message);
             _UnhandleExceptionForm.Show();
+        }
+
+        public static void LaunchFormerForm()
+        {
+            Formers _Formers = new Formers();
+            _Formers.Show();
         }
 
         [STAThread]
