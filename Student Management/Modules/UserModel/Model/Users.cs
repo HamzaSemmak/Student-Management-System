@@ -13,7 +13,7 @@ namespace Student_Management.Modules.UserModel.Model
         protected string phone;
         protected string dateNaissance;
         protected int age;
-        protected string adress;
+        protected string city;
         protected string formerType;
         protected string userType;
         protected string status; 
@@ -25,7 +25,7 @@ namespace Student_Management.Modules.UserModel.Model
         public string Phone { get => phone; set => phone = value; }
         public string DateNaissance { get => dateNaissance; set => dateNaissance = value; }
         public int Age { get => age; set => age = value; }
-        public string Adress { get => adress; set => adress = value; }
+        public string City { get => city; set => city = value; }
         public string FormerType { get => formerType; set => formerType = value; }
         public string UserType { get => userType; set => userType = value; }
         public string Status { get => status; set => status = value; }
@@ -35,7 +35,7 @@ namespace Student_Management.Modules.UserModel.Model
         { 
             //
         }
-        public Users(string Matricule, string Name, string Password, string Phone, string DateNaissance, int Age, string Adress, string FormerType, string UserType)
+        public Users(string Matricule, string Name, string Password, string Phone, string DateNaissance, int Age, string city, string FormerType, string UserType)
         {
             this.matricule = Matricule;
             this.name = Name;
@@ -43,7 +43,7 @@ namespace Student_Management.Modules.UserModel.Model
             this.phone = Phone;
             this.DateNaissance = DateNaissance;
             this.age = Age;
-            this.adress = Adress;
+            this.city = city;
             this.formerType = FormerType;
             if (!string.IsNullOrEmpty(UserType))
                 this.userType = "User";

@@ -7,6 +7,7 @@ using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
 using System;
 using System.Windows.Forms;
+using static log4net.Appender.RollingFileAppender;
 
 namespace Student_Management
 {
@@ -16,6 +17,7 @@ namespace Student_Management
         /// Point d'entrée principal de l'application.
         /// </summary>
         public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Program));
+        public static DateTime dateTime = DateTime.Now;
 
         public static LoadingForm _Splash()
         {
@@ -53,6 +55,11 @@ namespace Student_Management
         {
             Formers _Formers = new Formers();
             _Formers.Show();
+        }
+
+        public static string CurrentDate()
+        {
+            return $"{dateTime.DayOfWeek}, {dateTime.Day} {dateTime.ToString("MMMM")} {dateTime.Year}";
         }
 
         [STAThread]

@@ -9,11 +9,11 @@ Create Table Users (
 	ID int primary key identity(1,1),
 	Matricule varchar(10) unique,
 	Name varchar(45) Unique,
-	Password varchar(20),
+	Password varchar(10),
 	Phone int,
-	DateNaissance date,
+	DateNaissance varchar(20),
 	Age int,
-	Adresse varchar(255),
+	City varchar(255),
 	FormerType varchar(255),
 	UserType varchar(25) default 'User',
 	Constraint CK_UserType check (UserType in ('Admin', 'User')),
@@ -35,6 +35,14 @@ Create Table FormersType(
 
 /* Insertion */
 insert into FormersType values('Teacher'),('Directeur of School'),('General guard'),('Security'),('Driver'),('Director assistance');
+insert into Users values('AA10274','Hamza Semmak','AA102374','0667786555','2001-07-28',21,'Rabat','Directeur of School','Admin','InLocked',1),
+						('KKA1050','Karim Aissa','Karim2001','0662504036','2001-06-05',21,'Rabat','Director assistance','Admin','InLocked',1),
+						('AbY7080','Yacine Abnai','Yacine4040','0668689530','2001-08-05',24,'Rabat','General guard','Admin','InLocked',1),
+						('TTR5070','Tarik Oulkhabou','Tarik2001','0825361452','1998-06-05',24,'Medelt','General guard','Admin','InLocked',1),
+						('SAIT404','Soufiane Ait Hammou','Souf1999','0452639874','1999-06-05',24,'Sale','General guard','Admin','InLocked',1),
+						('OMAM404','Omar Amoun','Omar1950','0632323232','1993-12-20',30,'Kenitra','Teacher','User','InLocked',1),
+						('AKBAO20','Zakaria Baoune','ZkBa5065','046568705','1998-11-25',25,'Khenifra','Teacher','User','InLocked',1);
+
 
 /* Procedure Stocke */
 Create Procedure Authentification
@@ -94,4 +102,5 @@ Select * from Users;
 Select * from FormersType;
 Select * from LockedUser;
 Delete from LockedUser;
+Delete from Users;
 Select Count(*) from Users;

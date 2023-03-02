@@ -132,7 +132,22 @@
   <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAWJJREFUSEvl
+        lb1KA1EQRvcVVAQNapc62AQhndpZ+woiiCBI8DGECIpYWPgCSvA1/Cu0EkQFEbTRQjHFeubeAe/dTe7u
+        XUkhHjgsO/PNLOxPkvwf0jSdxnU8wTO81aOcr+GURuNhuIYH2MMQX7iPkzpaDgYW8BVjeMF5XRGGYAs/
+        ZaoCHzinq/pDQG7Rs6R/wRNO6Mo8NOUZhJB7v6jHEHu60ofGDBY95LZm2/Z0IPIy5N86ipumHabsRYQN
+        s9iF4qntBYm5SNcsdqF4ZXseO7ji2NBsI1OXXJYLs9iF4qPteSxpO4jkbNzjQds/ULy0PY9D3HJsaraZ
+        qUsuy7lZ7EKxa3tBYp7JsVnsQlF+7IqIuciqWexCcfjfiUBj10QGc4TLegzR0ZV5aI7jvYlV5w7HdGV/
+        CMziu6Qr8IbmWyqEYB1vZCqCa6zrinIwMIodlIcYQvrbOKKj8TA8vP/4P0aSfAO/LlJJjYK+2QAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
   <data name="guna2Button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAatJREFUSEvt
@@ -204,6 +219,9 @@
   </metadata>
   <metadata name="Logo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 16</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="Table.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>338, 19</value>

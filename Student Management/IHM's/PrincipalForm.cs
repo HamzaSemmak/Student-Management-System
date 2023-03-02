@@ -19,7 +19,6 @@ namespace Student_Management.IHM_s
     public partial class PrincipalForm : Form
     {
         public static readonly ILog logger = Log4NetManager.GetLogger(typeof(PrincipalForm));
-        public static DateTime dateTime = DateTime.Now;
         public bool Access = true;
         public UsersController UserController;
         public ResponseStatus ResponseStatus;
@@ -49,7 +48,7 @@ namespace Student_Management.IHM_s
 
         private void InitializePrincipalForm()
         {
-            label1.Text = $"{dateTime.DayOfWeek}, {dateTime.Day} {dateTime.ToString("MMMM")} {dateTime.Year}";
+            label1.Text = $"{Program.CurrentDate()}";
             this.guna2DataGridView1.RowTemplate.Height = 40;
             ListOfUsers(Access);
             InitializeInformation(Access);

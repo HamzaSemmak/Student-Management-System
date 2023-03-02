@@ -1,6 +1,7 @@
 ﻿using log4net;
 using log4net.Repository.Hierarchy;
 using Student_Management.Modules.LoggerManager;
+using Student_Management.Modules.UserModel.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +17,11 @@ namespace Student_Management.IHM_s.ComposentsGraphique
     public partial class LoadingForm : Form
     {
         public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Program));
+        public UsersController UserControl = new UsersController();
         public LoadingForm()
         {
             InitializeComponent();
+            UserControl.forgetUser();
             logger.Info("Connect...");
         }
 

@@ -116,7 +116,7 @@ namespace Student_Management.Modules.UserModel.Controller
                         Convert.ToString(this.sqlDataReader["Phone"]),
                         Convert.ToString(this.sqlDataReader["DateNaissance"]),
                         Convert.ToInt32(this.sqlDataReader["Age"]),
-                        Convert.ToString(this.sqlDataReader["Adresse"]),
+                        Convert.ToString(this.sqlDataReader["city"]),
                         Convert.ToString(this.sqlDataReader["FormerType"]),
                         Convert.ToString(this.sqlDataReader["UserType"])
                     ));
@@ -146,7 +146,7 @@ namespace Student_Management.Modules.UserModel.Controller
                         Convert.ToString(this.sqlDataReader["Phone"]),
                         Convert.ToString(this.sqlDataReader["DateNaissance"]),
                         Convert.ToInt32(this.sqlDataReader["Age"]),
-                        Convert.ToString(this.sqlDataReader["Adresse"]),
+                        Convert.ToString(this.sqlDataReader["city"]),
                         Convert.ToString(this.sqlDataReader["FormerType"]),
                         Convert.ToString(this.sqlDataReader["UserType"])
                     ));
@@ -175,7 +175,7 @@ namespace Student_Management.Modules.UserModel.Controller
                         Convert.ToString(this.sqlDataReader["Phone"]),
                         Convert.ToString(this.sqlDataReader["DateNaissance"]),
                         Convert.ToInt32(this.sqlDataReader["Age"]),
-                        Convert.ToString(this.sqlDataReader["Adresse"]),
+                        Convert.ToString(this.sqlDataReader["city"]),
                         Convert.ToString(this.sqlDataReader["FormerType"]),
                         Convert.ToString(this.sqlDataReader["UserType"])
                     ));
