@@ -63,6 +63,12 @@
     <Compile Include="IHM%27s\Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM%27s\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM%27s\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\UnhandleExceptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="IHM%27s\Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM%27s\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM%27s\ComposentsGraphique\UnhandleExceptionForm.resx">
       <DependentUpon>UnhandleExceptionForm.cs</DependentUpon>
