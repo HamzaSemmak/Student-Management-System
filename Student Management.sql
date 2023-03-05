@@ -10,7 +10,7 @@ Create Table Users (
 	Matricule varchar(10) unique,
 	Name varchar(45) Unique,
 	Password varchar(10),
-	Phone int,
+	Phone varchar(45),
 	DateNaissance varchar(20),
 	Age int,
 	City varchar(255),
@@ -102,7 +102,7 @@ Create Procedure CreateUser
 	@matricule varchar(10),
 	@name varchar(45),
 	@password varchar(10),
-	@phone int,
+	@phone varchar(45),
 	@dateNaissance varchar(20),
 	@age int,
 	@city varchar(255),
@@ -134,3 +134,4 @@ Select Count(*) from FormersType;
 Select * from LockedUser;
 Delete from Users;
 Select Count(*) from Users;
+Delete from Users where ID = 110

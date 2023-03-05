@@ -21,11 +21,15 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
         public static readonly ILog logger = Log4NetManager.GetLogger(typeof(CreateFormer));
         public UsersController UserController;
         public ResponseStatus ResponseStatus;
+        public FormersController FormersController;
         public Control[] AllFields;
 
         public CreateFormer()
         {
             InitializeComponent();
+            UserController = new UsersController();
+            ResponseStatus = new ResponseStatus();
+            FormersController = new FormersController();
             AllFields = new Control[]
             {
                 NameField,
@@ -44,23 +48,23 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
             GetYearField();
             GetMonthField();
             GetDaysField();
+            ClearAllFields();
         }
 
         private void ClearAllFields()
         {
             foreach (Control Field in AllFields)
             {
-                Field.Text = "";
+                Field.Text = null;
             }
         }
 
         private void GetAllFormerTpeField()
         {
-            foreach (string item in UserController.getAllFormersType())
+            foreach(string item in FormersController.getAllFormersType())
             {
                 FormerTpeField.Items.Add(item);
             }
-
         }
 
         private void GetUserRole()
@@ -116,7 +120,7 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
         {
             string message = string.Empty;
             string DateNaissance = string.Empty;
-            int Age = 0;
+            DateTime CurrentDate = DateTime.Now;
             int status = 0;
             try
             {
@@ -157,9 +161,9 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                         /* Phone => */
                         Phone = Convert.ToString(PhoneField.Text),
                         /* DateNaissance => */
-                        DateNaissance = Convert.ToString(DateNaissance),
+                        DateNaissance = Convert.ToString($"{YearField.Text}-{MonthField.Text}-{DayField}"),
                         /* Age => */
-                        Age = Convert.ToInt32(Age),
+                        Age = Convert.ToInt32(CurrentDate.Year - Convert.ToInt32(YearField.Text)),
                         /* city => */
                         City = Convert.ToString(CityField.Text),
                         /* FormerType => */
@@ -168,7 +172,7 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                         UserType = Convert.ToString(UserRoleField.Text),
 
                     };
-                    status = UserController.CreateUser(users);
+                    status = FormersController.CreateUser(users);
                     if (status == ResponseStatus.ResponseCodeMatriculeExists)
                     {
                         message = "The Matricule is Already Exists, Please Try Again";
@@ -187,13 +191,15 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                     else if (status == ResponseStatus.ResponseCodeCreateUserSuccefly)
                     {
                         message = "User Createad successfly.";
-                        Program.LaunchHandleExceptionForm(message);
+                        HandleExceptionForm _HandleExceptionForm = new HandleExceptionForm(message);
+                        _HandleExceptionForm.Show();
                     }
                 }
             }
             catch (Exception ex)
             {
                 logger.Error($"Error : {ex.Message}");
+                Program.LaunchUnhandleExceptionForm(Convert.ToString(ex.Message));
             }
         }
     }

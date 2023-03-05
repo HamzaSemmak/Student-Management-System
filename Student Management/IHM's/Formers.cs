@@ -47,6 +47,7 @@ namespace Student_Management.IHM_s
             if (!redirect)
                 return;
 
+            this.guna2DataGridView1.Rows.Clear();
             foreach (Users Rows in UserController.AllUsers())
             {
                 this.guna2DataGridView1.Rows.Add(Rows.Matricule, Rows.Name, Rows.Phone, Rows.DateNaissance, Rows.FormerType);
@@ -68,6 +69,7 @@ namespace Student_Management.IHM_s
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             ThrowUserControl(AllFormers);
+            ListOfUsers(Access);
         }
 
         private void guna2DataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)

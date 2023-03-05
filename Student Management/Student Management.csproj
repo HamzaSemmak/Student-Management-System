@@ -108,6 +108,7 @@
     <Compile Include="Modules\Config\ResponseStatus.cs" />
     <Compile Include="Modules\ConnectionDB\ConnectionDB.cs" />
     <Compile Include="Modules\Logger Manager\Log4NetManager.cs" />
+    <Compile Include="Modules\UserModel\Controller\FormersController.cs" />
     <Compile Include="Modules\UserModel\Controller\UsersController.cs" />
     <Compile Include="Modules\UserModel\Model\Users.cs" />
     <Compile Include="Program.cs" />
