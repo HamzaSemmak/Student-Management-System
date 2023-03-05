@@ -15,6 +15,10 @@ namespace Student_Management.Modules.Config
         private int responseCodeUserIsUndefiend = 40210;
         private int responseCodeUserIsAdmin = 40211;
         private int responseCodeUserIsNotAdmin = 40212;
+        private int responseCodeMatriculeExists = 40221;
+        private int responseCodeNameExists = 40222;
+        private int responseCodePasswordExists = 40223;
+        private int responseCodeCreateUserSuccefly = 40223;
 
         public ResponseStatus() 
         {
@@ -28,5 +32,9 @@ namespace Student_Management.Modules.Config
         public int ResponseCodeUserIsUndefiend { get => responseCodeUserIsUndefiend; set => responseCodeUserIsUndefiend = value; }
         public int ResponseCodeUserIsAdmin { get => responseCodeUserIsAdmin; set => responseCodeUserIsAdmin = value; }
         public int ResponseCodeUserIsNotAdmin { get => responseCodeUserIsNotAdmin; set => responseCodeUserIsNotAdmin = value; }
+        public int ResponseCodeMatriculeExists { get => responseCodeMatriculeExists; set => responseCodeMatriculeExists = value; }
+        public int ResponseCodeNameExists { get => responseCodeNameExists; set => responseCodeNameExists = value; }
+        public int ResponseCodePasswordExists { get => responseCodePasswordExists; set => responseCodePasswordExists = value; }
+        public int ResponseCodeCreateUserSuccefly { get => responseCodeCreateUserSuccefly; set => responseCodeCreateUserSuccefly = value; }
     }
 }

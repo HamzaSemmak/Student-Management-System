@@ -51,6 +51,12 @@ namespace Student_Management
             _UnhandleExceptionForm.Show();
         }
 
+        public static void LaunchHandleExceptionForm(string message)
+        {
+            HandleExceptionForm _HandleExceptionForm = new HandleExceptionForm(message);
+            _HandleExceptionForm.Show();
+        }
+
         public static void LaunchFormerForm()
         {
             Formers _Formers = new Formers();

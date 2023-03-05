@@ -97,10 +97,40 @@ Declare @status int
 Execute CheckUserIfAdmin 9, @status Output
 Select @status
 
+Create Procedure CreateUser
+(
+	@matricule varchar(10),
+	@name varchar(45),
+	@password varchar(10),
+	@phone int,
+	@dateNaissance varchar(20),
+	@age int,
+	@city varchar(255),
+	@formerType varchar(255),
+	@userType varchar(25),
+	@msg int Out
+)
+As
+Begin
+	If Exists (Select COUNT(*) from Users where Matricule = @matricule Having COUNT(*) > 0 )
+		Begin Set @msg = 40221 Return @msg End /* Matricule Exists */
+	Else If Exists (Select COUNT(*) from Users where Name = @name Having COUNT(*) > 0 )
+		Begin Set @msg = 40222 Return @msg End /* Name Exists */
+	Else If Exists (Select COUNT(*) from Users where Password = @password Having COUNT(*) > 0 )
+		Begin Set @msg = 40223 Return @msg End /* Password Exists */
+	Else
+		Insert into Users values(@matricule, @name, @password, @phone, @dateNaissance, @age, @city, @formerType, @userType, 'InLocked', 1);
+		Begin Set @msg = 40224 Return @msg End /* (1 row(s) affected) */
+End
+Declare @status int
+Execute CreateUser 'AAZZEE', 'Mohemed Semmak', 'MM102345', 0666666666, '2001-07-28', 21, 'Rabat', 'Teacher', 'User', @status Output
+Select @status
+
+
 /* */	
 Select * from Users;
 Select * from FormersType;
+Select Count(*) from FormersType;
 Select * from LockedUser;
-Delete from LockedUser;
 Delete from Users;
 Select Count(*) from Users;
