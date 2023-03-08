@@ -18,7 +18,7 @@ namespace Student_Management.Modules.Config
         private int responseCodeMatriculeExists = 40221;
         private int responseCodeNameExists = 40222;
         private int responseCodePasswordExists = 40223;
-        private int responseCodeCreateUserSuccefly = 40223;
+        private int responseCodeCreateUserSuccefly = 40224;
 
         public ResponseStatus() 
         {

@@ -31,7 +31,6 @@ namespace Student_Management.Modules.UserModel.Controller
 
                 result.Append(chars[idx]);
             }
-
             return result.ToString();
         }
 
@@ -168,6 +167,42 @@ namespace Student_Management.Modules.UserModel.Controller
             }
             this.CloseConnection();
             return FormerType;
+        }
+
+        public List<Users> getFormerByMatricule(string Matricule)
+        {
+            List<Users> Users = new List<Users>();
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select * from Users where Matricule = '{Matricule}'";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if (this.sqlDataReader.HasRows)
+            {
+                while (this.sqlDataReader.Read())
+                {
+                    Users.Add(new Users(
+                        Convert.ToString(this.sqlDataReader["Matricule"]),
+                        Convert.ToString(this.sqlDataReader["Name"]),
+                        Convert.ToString(this.sqlDataReader["Password"]),
+                        Convert.ToString(this.sqlDataReader["Phone"]),
+                        Convert.ToString(this.sqlDataReader["DateNaissance"]),
+                        Convert.ToInt32(this.sqlDataReader["Age"]),
+                        Convert.ToString(this.sqlDataReader["city"]),
+                        Convert.ToString(this.sqlDataReader["FormerType"]),
+                        Convert.ToString(this.sqlDataReader["UserType"])
+                    ));
+                }
+            }
+            this.CloseConnection();
+            return Users;
+        }
+
+        public StringBuilder FormerCreated()
+        {
+            StringBuilder Former = new StringBuilder();
+
+            return Former;
         }
     }
 }

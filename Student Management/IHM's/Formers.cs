@@ -5,6 +5,7 @@ using Student_Management.Modules.LoggerManager;
 using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
 using System;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace Student_Management.IHM_s
@@ -14,8 +15,11 @@ namespace Student_Management.IHM_s
         public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Formers));
         public bool Access = true;
         public UsersController UserController;
+        public FormersController FormerController;
         public ResponseStatus ResponseStatus;
         public CreateFormer CreateFormer;
+        public FormerSetting FormerSetting;
+        public ShowFormerDetails ShowFormerDetails;
 
         public Formers()
         {
@@ -23,12 +27,14 @@ namespace Student_Management.IHM_s
             UserController = new UsersController();
             ResponseStatus = new ResponseStatus();
             CreateFormer = new CreateFormer();
+            FormerSetting = new FormerSetting();
+            FormerController = new FormersController();
             InitializeFormers();
         }
 
         private void InitializeFormers()
         {
-            label1.Text = $"{Program.CurrentDate()}";
+            //label1.Text = $"{Program.CurrentDate()}";
             this.guna2DataGridView1.RowTemplate.Height = 40;
             ListOfUsers(Access);
         }
@@ -54,33 +60,51 @@ namespace Student_Management.IHM_s
             }
         }
 
-        private void ThrowUserControl(Control control)
+        private void ThrowUserControl()
         {
             panel1.Controls.Clear();
-            panel1.Controls.Add(control);
-            control.Dock = DockStyle.Fill; 
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            ThrowUserControl(CreateFormer);
+            panel1.Controls.Clear();
+            panel1.Controls.Add(CreateFormer);
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            ThrowUserControl(AllFormers);
+            panel1.Controls.Clear();
+            panel1.Controls.Add(AllFormers);
             ListOfUsers(Access);
         }
 
         private void guna2DataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (!(sender as Control).Enabled)
-                return;
-
             int Position = this.guna2DataGridView1.CurrentRow.Index;
             string Matricule = this.guna2DataGridView1.Rows[Position].Cells[0].Value.ToString();
+            Users user = new Users();
+            foreach(Users item in FormerController.getFormerByMatricule(Matricule))
+            {
+                user.Matricule = item.Matricule;
+                user.Name = item.Name;
+                user.Password = item.Password;
+                user.Phone = item.Phone;
+                user .DateNaissance = item.DateNaissance;
+                user.Age = item.Age;
+                user.City = item.City;
+                user.FormerType = item.FormerType;
+                user.UserType = item.UserType;
+            }
+            ShowFormerDetails = new ShowFormerDetails(user);
+            panel1.Controls.Clear();
+            panel1.Controls.Add(ShowFormerDetails);
 
-            MessageBox.Show($"Matricule : {Matricule}");
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(FormerSetting);
         }
     }
 }

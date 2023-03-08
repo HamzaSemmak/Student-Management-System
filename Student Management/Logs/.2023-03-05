@@ -116,3 +116,19 @@
 2023-03-05 01:04:32,207 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
 2023-03-05 01:04:32,308 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
 {Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-05 23:52:50,649 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-05 23:52:51,068 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Error : Test 
+2023-03-05 23:54:50,289 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-05 23:54:52,019 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-05 23:55:11,052 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-05 23:55:11,151 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-05 23:55:57,716 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Ther is an Empty Field, Please Try Again 
+2023-03-05 23:57:41,180 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-05 23:57:41,722 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-05 23:58:31,075 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-05 23:58:31,452 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-05 23:58:50,754 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-05 23:58:50,855 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-05 23:59:58,351 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Error : User Createad successfly. 

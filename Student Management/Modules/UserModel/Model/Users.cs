@@ -18,7 +18,6 @@ namespace Student_Management.Modules.UserModel.Model
         protected string userType;
         protected string status; 
         protected int checks;
-
         public string Matricule { get => matricule; set => matricule = value; }
         public string Name { get => name; set => name = value; }
         public string Password { get => password; set => password = value; }

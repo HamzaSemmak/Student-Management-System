@@ -31,13 +31,9 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.UserRoleField = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.FormerTpeField = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.CityField = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.DayField = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.MonthField = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.YearField = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.PhoneField = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,6 +45,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.FormerTpeField = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.YearField = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.MonthField = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DayField = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // guna2Button4
@@ -98,24 +98,6 @@
             this.label11.TabIndex = 130;
             this.label11.Text = "User Role :";
             // 
-            // FormerTpeField
-            // 
-            this.FormerTpeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.FormerTpeField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.FormerTpeField.BorderRadius = 5;
-            this.FormerTpeField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.FormerTpeField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FormerTpeField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.FormerTpeField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FormerTpeField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FormerTpeField.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.FormerTpeField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.FormerTpeField.ItemHeight = 40;
-            this.FormerTpeField.Location = new System.Drawing.Point(391, 251);
-            this.FormerTpeField.Name = "FormerTpeField";
-            this.FormerTpeField.Size = new System.Drawing.Size(301, 46);
-            this.FormerTpeField.TabIndex = 129;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -159,63 +141,6 @@
             this.label9.Size = new System.Drawing.Size(45, 18);
             this.label9.TabIndex = 126;
             this.label9.Text = "City :";
-            // 
-            // DayField
-            // 
-            this.DayField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.DayField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.DayField.BorderRadius = 7;
-            this.DayField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DayField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DayField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.DayField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DayField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DayField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DayField.ForeColor = System.Drawing.Color.White;
-            this.DayField.IntegralHeight = false;
-            this.DayField.ItemHeight = 40;
-            this.DayField.Location = new System.Drawing.Point(618, 366);
-            this.DayField.Name = "DayField";
-            this.DayField.Size = new System.Drawing.Size(80, 46);
-            this.DayField.TabIndex = 125;
-            // 
-            // MonthField
-            // 
-            this.MonthField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.MonthField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.MonthField.BorderRadius = 5;
-            this.MonthField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MonthField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MonthField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.MonthField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MonthField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MonthField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthField.ForeColor = System.Drawing.Color.White;
-            this.MonthField.IntegralHeight = false;
-            this.MonthField.ItemHeight = 40;
-            this.MonthField.Location = new System.Drawing.Point(532, 366);
-            this.MonthField.Name = "MonthField";
-            this.MonthField.Size = new System.Drawing.Size(80, 46);
-            this.MonthField.TabIndex = 124;
-            // 
-            // YearField
-            // 
-            this.YearField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.YearField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.YearField.BorderRadius = 5;
-            this.YearField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.YearField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.YearField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.YearField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.YearField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.YearField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearField.ForeColor = System.Drawing.Color.White;
-            this.YearField.IntegralHeight = false;
-            this.YearField.ItemHeight = 40;
-            this.YearField.Location = new System.Drawing.Point(391, 366);
-            this.YearField.Name = "YearField";
-            this.YearField.Size = new System.Drawing.Size(135, 46);
-            this.YearField.TabIndex = 123;
             // 
             // label7
             // 
@@ -395,22 +320,94 @@
             this.guna2Button1.Text = "Cancel";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // FormerTpeField
+            // 
+            this.FormerTpeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.FormerTpeField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.FormerTpeField.BorderRadius = 5;
+            this.FormerTpeField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.FormerTpeField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FormerTpeField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.FormerTpeField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FormerTpeField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FormerTpeField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormerTpeField.ForeColor = System.Drawing.Color.White;
+            this.FormerTpeField.ItemHeight = 40;
+            this.FormerTpeField.Location = new System.Drawing.Point(389, 251);
+            this.FormerTpeField.Name = "FormerTpeField";
+            this.FormerTpeField.Size = new System.Drawing.Size(296, 46);
+            this.FormerTpeField.TabIndex = 134;
+            // 
+            // YearField
+            // 
+            this.YearField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.YearField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.YearField.BorderRadius = 5;
+            this.YearField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.YearField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.YearField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.YearField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.YearField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.YearField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearField.ForeColor = System.Drawing.Color.White;
+            this.YearField.ItemHeight = 40;
+            this.YearField.Location = new System.Drawing.Point(391, 366);
+            this.YearField.Name = "YearField";
+            this.YearField.Size = new System.Drawing.Size(134, 46);
+            this.YearField.TabIndex = 135;
+            // 
+            // MonthField
+            // 
+            this.MonthField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.MonthField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.MonthField.BorderRadius = 5;
+            this.MonthField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MonthField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MonthField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.MonthField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MonthField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MonthField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthField.ForeColor = System.Drawing.Color.White;
+            this.MonthField.ItemHeight = 40;
+            this.MonthField.Location = new System.Drawing.Point(531, 366);
+            this.MonthField.Name = "MonthField";
+            this.MonthField.Size = new System.Drawing.Size(143, 46);
+            this.MonthField.TabIndex = 136;
+            // 
+            // DayField
+            // 
+            this.DayField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.DayField.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.DayField.BorderRadius = 5;
+            this.DayField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DayField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DayField.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.DayField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DayField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DayField.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DayField.ForeColor = System.Drawing.Color.White;
+            this.DayField.ItemHeight = 40;
+            this.DayField.Location = new System.Drawing.Point(680, 366);
+            this.DayField.Name = "DayField";
+            this.DayField.Size = new System.Drawing.Size(136, 46);
+            this.DayField.TabIndex = 137;
+            // 
             // CreateFormer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.DayField);
+            this.Controls.Add(this.MonthField);
+            this.Controls.Add(this.YearField);
+            this.Controls.Add(this.FormerTpeField);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.UserRoleField);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.FormerTpeField);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.CityField);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.DayField);
-            this.Controls.Add(this.MonthField);
-            this.Controls.Add(this.YearField);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.PhoneField);
             this.Controls.Add(this.label6);
@@ -423,7 +420,7 @@
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "CreateFormer";
-            this.Size = new System.Drawing.Size(1138, 606);
+            this.Size = new System.Drawing.Size(1091, 684);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,13 +430,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2ComboBox UserRoleField;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2ComboBox FormerTpeField;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox CityField;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox DayField;
-        private Guna.UI2.WinForms.Guna2ComboBox MonthField;
-        private Guna.UI2.WinForms.Guna2ComboBox YearField;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox PhoneField;
         private System.Windows.Forms.Label label6;
@@ -451,5 +444,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ComboBox FormerTpeField;
+        private Guna.UI2.WinForms.Guna2ComboBox YearField;
+        private Guna.UI2.WinForms.Guna2ComboBox MonthField;
+        private Guna.UI2.WinForms.Guna2ComboBox DayField;
     }
 }

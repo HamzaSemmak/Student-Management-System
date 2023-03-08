@@ -118,12 +118,11 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
 
         private void CreateUser()
         {
-            string message = string.Empty;
-            string DateNaissance = string.Empty;
             DateTime CurrentDate = DateTime.Now;
-            int status = 0;
+            int status;
             try
             {
+                string message;
                 if (NameField.Text == "" || ConfirmPasswordField.Text == "" || PassworField.Text == ""
                         || PhoneField.Text == "" || CityField.Text == "" || YearField.Text == ""
                         || MonthField.Text == "" || DayField.Text == "" || FormerTpeField.Text == ""
@@ -161,7 +160,7 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                         /* Phone => */
                         Phone = Convert.ToString(PhoneField.Text),
                         /* DateNaissance => */
-                        DateNaissance = Convert.ToString($"{YearField.Text}-{MonthField.Text}-{DayField}"),
+                        DateNaissance = Convert.ToString($"{YearField.Text}-{MonthField.Text}-{DayField.Text}"),
                         /* Age => */
                         Age = Convert.ToInt32(CurrentDate.Year - Convert.ToInt32(YearField.Text)),
                         /* city => */
@@ -191,8 +190,9 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                     else if (status == ResponseStatus.ResponseCodeCreateUserSuccefly)
                     {
                         message = "User Createad successfly.";
-                        HandleExceptionForm _HandleExceptionForm = new HandleExceptionForm(message);
-                        _HandleExceptionForm.Show();
+                        ClearAllFields();
+                        Program.LaunchHandleExceptionForm(message);
+
                     }
                 }
             }

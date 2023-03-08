@@ -134,4 +134,4 @@ Select Count(*) from FormersType;
 Select * from LockedUser;
 Delete from Users;
 Select Count(*) from Users;
-Delete from Users where ID = 110
+Delete from Users where ID = 14

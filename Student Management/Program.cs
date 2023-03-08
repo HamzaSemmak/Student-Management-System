@@ -2,6 +2,7 @@
 using log4net;
 using Student_Management.IHM_s;
 using Student_Management.IHM_s.ComposentsGraphique;
+using Student_Management.IHM_s.ComposentsGraphique.Formers;
 using Student_Management.Modules.LoggerManager;
 using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
