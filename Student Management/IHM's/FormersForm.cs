@@ -10,31 +10,29 @@ using System.Windows.Forms;
 
 namespace Student_Management.IHM_s
 {
-    public partial class Formers : Form
+    public partial class FormersForm : Form
     {
-        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(Formers));
+        public static readonly ILog logger = Log4NetManager.GetLogger(typeof(FormersForm));
         public bool Access = true;
         public UsersController UserController;
         public FormersController FormerController;
         public ResponseStatus ResponseStatus;
         public CreateFormer CreateFormer;
-        public FormerSetting FormerSetting;
         public ShowFormerDetails ShowFormerDetails;
 
-        public Formers()
+
+        public FormersForm()
         {
             InitializeComponent();
             UserController = new UsersController();
             ResponseStatus = new ResponseStatus();
             CreateFormer = new CreateFormer();
-            FormerSetting = new FormerSetting();
             FormerController = new FormersController();
             InitializeFormers();
         }
 
         private void InitializeFormers()
         {
-            //label1.Text = $"{Program.CurrentDate()}";
             this.guna2DataGridView1.RowTemplate.Height = 40;
             ListOfUsers(Access);
         }
@@ -78,6 +76,13 @@ namespace Student_Management.IHM_s
             ListOfUsers(Access);
         }
 
+        public void ReturnFromDeleteFormerForm()
+        {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(AllFormers);
+            ListOfUsers(Access);
+        }
+
         private void guna2DataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int Position = this.guna2DataGridView1.CurrentRow.Index;
@@ -103,8 +108,7 @@ namespace Student_Management.IHM_s
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            panel1.Controls.Add(FormerSetting);
+
         }
     }
 }

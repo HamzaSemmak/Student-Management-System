@@ -19,6 +19,10 @@ namespace Student_Management.Modules.Config
         private int responseCodeNameExists = 40222;
         private int responseCodePasswordExists = 40223;
         private int responseCodeCreateUserSuccefly = 40224;
+        private int responseCodeDeleteFormerAuthentificate = 40311;
+        private int responseCodeDeleteFormer = 40310;
+        private int responseCodeFormerIsUndefiened = 40312; 
+        private int responseCodeFormerIsUpdatedSuccessfly = 40319;
 
         public ResponseStatus() 
         {
@@ -36,5 +40,9 @@ namespace Student_Management.Modules.Config
         public int ResponseCodeNameExists { get => responseCodeNameExists; set => responseCodeNameExists = value; }
         public int ResponseCodePasswordExists { get => responseCodePasswordExists; set => responseCodePasswordExists = value; }
         public int ResponseCodeCreateUserSuccefly { get => responseCodeCreateUserSuccefly; set => responseCodeCreateUserSuccefly = value; }
+        public int ResponseCodeDeleteFormerAuthentificate { get => responseCodeDeleteFormerAuthentificate; set => responseCodeDeleteFormerAuthentificate = value; }
+        public int ResponseCodeDeleteFormer { get => responseCodeDeleteFormer; set => responseCodeDeleteFormer = value; }
+        public int ResponseCodeFormerIsUndefiened { get => responseCodeFormerIsUndefiened; set => responseCodeFormerIsUndefiened = value; }
+        public int ResponseCodeFormerIsUpdatedSuccessfly { get => responseCodeFormerIsUpdatedSuccessfly; set => responseCodeFormerIsUpdatedSuccessfly = value; }
     }
 }

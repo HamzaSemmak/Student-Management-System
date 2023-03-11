@@ -16,7 +16,7 @@ namespace Student_Management.IHM_s.ComposentsGraphique
         {
             InitializeComponent();
             this.label2.Text = $"{Msg.ToString()}";
-            Program.logger.Error($"Error : {Msg} ");
+            Program.logger.Error($"Success : {Msg} ");
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

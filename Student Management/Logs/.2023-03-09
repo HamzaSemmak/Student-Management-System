@@ -1,0 +1,157 @@
+2023-03-09 23:21:04,070 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:21:04,247 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:21:18,266 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:21:18,372 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:22:31,482 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:22:31,501 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : KpZBI2I17t 
+Name : test 
+Password : testtest 
+DateNaissance : 1974-12-16 
+Age : 49 
+City : 2121212121 
+Former Type : Directeur of School 
+User Type : Admin 
+
+2023-03-09 23:23:04,645 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former is Deleted Successfly.KpZBI2I17t 
+2023-03-09 23:23:23,702 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:23:23,702 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:24:14,685 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:24:14,863 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:24:31,178 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:24:31,268 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:24:38,521 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:24:38,521 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:24:47,649 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:24:47,835 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:25:05,657 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:25:05,748 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:25:44,763 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:25:44,788 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : WOnIGJL3Af 
+Name : Mohemed Semmak 
+Password : Semmak101 
+DateNaissance : 1974-11-17 
+Age : 49 
+City : Rabat 
+Former Type : Teacher 
+User Type : Admin 
+
+2023-03-09 23:25:46,529 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:25:46,529 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:25:51,452 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:25:51,628 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:26:15,564 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:26:15,675 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Mohemed Semmak, Password : Semmak101}
+2023-03-09 23:26:28,393 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Error : The DELETE statement conflicted with the REFERENCE constraint "FK__LockedUse__ID_Us__09FE775D". The conflict occurred in database "Student_Management", table "dbo.LockedUser", column 'ID_User'.
+The statement has been terminated. 
+2023-03-09 23:27:22,018 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former is Deleted Successfly.WOnIGJL3Af 
+2023-03-09 23:27:34,848 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:27:34,848 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:31:49,141 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:31:49,322 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:32:05,508 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:32:05,601 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:32:58,116 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:32:58,137 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : wZjUuUMleF 
+Name : Test 
+Password : testtest 
+DateNaissance : 1974-11-16 
+Age : 49 
+City : Saleeeeeeee 
+Former Type : Teacher 
+User Type : User 
+
+2023-03-09 23:33:01,133 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:33:09,773 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Success : Former is Deleted Successfly. 
+2023-03-09 23:33:21,772 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:33:44,049 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:33:44,050 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:34:29,514 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:34:29,682 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:34:46,451 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:34:46,550 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:35:12,899 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:35:12,921 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : qolM3NV9o9 
+Name : test 
+Password : testtest 
+DateNaissance : 1973-11-16 
+Age : 50 
+City : ssssssss 
+Former Type : Teacher 
+User Type : User 
+
+2023-03-09 23:35:25,650 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Success : Former is Deleted Successfly. 
+2023-03-09 23:35:46,299 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:35:46,299 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:49:47,807 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:49:47,974 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:50:21,878 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:50:21,971 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: hAMZA sEMMAK, Password : aa102374}
+2023-03-09 23:50:30,617 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Success : Former is Deleted Successfly. 
+2023-03-09 23:50:37,973 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:50:37,973 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:50:47,438 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:50:47,608 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:51:02,720 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:51:02,826 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:51:20,942 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Success : Former is Deleted Successfly. 
+2023-03-09 23:51:29,509 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:51:29,509 [INFO ] [1] Student_Management.Program - Exit Application Student Management System
+2023-03-09 23:52:37,606 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:52:37,808 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:52:52,288 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:52:52,388 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:53:28,016 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:53:28,040 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : YLrHj0Mxks 
+Name : Test 
+Password : TestTest 
+DateNaissance : 1972-10-15 
+Age : 51 
+City : Raaaaaa 
+Former Type : Teacher 
+User Type : User 
+
+2023-03-09 23:53:35,334 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Success : Former is Deleted Successfly. 
+2023-03-09 23:57:04,302 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-09 23:57:04,565 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-09 23:57:19,654 [INFO ] [1] Student_Management.IHM_s.PrincipalForm - Type of User is Admin...
+2023-03-09 23:57:19,750 [INFO ] [1] Student_Management.IHM_s.Authentification - Logged Successfly, Information : 
+{Info: 40200, UserName: Hamza Semmak, Password : AA102374}
+2023-03-09 23:58:10,699 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:58:10,719 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : 06J7IEh8fN 
+Name : test100 
+Password : test100 
+DateNaissance : 1973-12-15 
+Age : 50 
+City : hg 
+Former Type : Teacher 
+User Type : User 
+
+2023-03-09 23:58:33,905 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm - Success : Former Createad successfly. 
+2023-03-09 23:58:33,924 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer - Former Information : 
+Matricule : 2n6KByKGnB 
+Name : test101 
+Password : test101 
+DateNaissance : 1973-11-16 
+Age : 50 
+City : ssssss 
+Former Type : Teacher 
+User Type : User 
+
+2023-03-09 23:59:08,286 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails - Success : Former is Deleted Successfly. 
+2023-03-09 23:59:12,584 [INFO ] [1] Student_Management.Program - DisConnect...
+2023-03-09 23:59:12,585 [INFO ] [1] Student_Management.Program - Exit Application Student Management System

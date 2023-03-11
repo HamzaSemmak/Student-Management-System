@@ -9,27 +9,30 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Student_Management.IHM_s.ComposentsGraphique.Formers
 {
-    public partial class CreateFormer : UserControl
+    public partial class UpdateFormers : UserControl
     {
         public static readonly ILog logger = Log4NetManager.GetLogger(typeof(CreateFormer));
         public UsersController UserController;
         public ResponseStatus ResponseStatus;
         public FormersController FormersController;
         public Control[] AllFields;
+        public string FormerMatricule = String.Empty;
 
-        public CreateFormer()
+        public UpdateFormers(string Matricule)
         {
             InitializeComponent();
+            FormerMatricule = Matricule;
             UserController = new UsersController();
             ResponseStatus = new ResponseStatus();
             FormersController = new FormersController();
+            InitFormersInformation(FormerMatricule);
             AllFields = new Control[]
             {
                 NameField,
@@ -38,30 +41,27 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                 PhoneField,
                 CityField,
                 FormerTpeField,
-                UserRoleField,
-                YearField,
-                DayField,
-                MonthField
+                UserRoleField
             };
             GetAllFormerTpeField();
             GetUserRole();
-            GetYearField();
-            GetMonthField();
-            GetDaysField();
-            ClearAllFields();
         }
 
-        private void ClearAllFields()
+        private void InitFormersInformation(string Matricule)
         {
-            foreach (Control Field in AllFields)
-            {
-                Field.Text = null;
-            }
+            List<Users> user = FormersController.getFormerByMatricule(Matricule);
+            NameField.Text = user[0].Name;
+            PassworField.Text = user[0].Password;
+            ConfirmPasswordField.Text = user[0].Password;
+            PhoneField.Text = user[0].Phone;
+            CityField.Text = user[0].City;
+            FormerTpeField.Text = user[0].FormerType;
+            UserRoleField.Text = user[0].UserType;
         }
 
         private void GetAllFormerTpeField()
         {
-            foreach(string item in FormersController.getAllFormersType())
+            foreach (string item in FormersController.getAllFormersType())
             {
                 FormerTpeField.Items.Add(item);
             }
@@ -72,61 +72,31 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
             UserRoleField.Items.Add("User");
             UserRoleField.Items.Add("Admin");
         }
-
-        private void GetYearField()
-        {
-            DateTime CurrentYear = DateTime.Now;
-            for(int i = CurrentYear.Year - 65; i <= CurrentYear.Year; i++)
-            {
-                YearField.Items.Add(i.ToString());
-            }
-        }
-
-        private void GetMonthField()
-        {
-            int CountOfMonth = 12;
-            for(int i = 1; i <= CountOfMonth; i++)
-            {
-                MonthField.Items.Add(i.ToString());
-            }
-        }
-
-        private void GetDaysField()
-        {
-            int CountOfDays = 31;
-            for(int i = 1;i <= CountOfDays; i++)
-            {
-                DayField.Items.Add(i.ToString());
-            }
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             if (!(sender as Control).Enabled)
                 return;
 
-            ClearAllFields();
+            InitFormersInformation(FormerMatricule);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            if(!(sender as Control).Enabled)
+            if (!(sender as Control).Enabled)
                 return;
 
-            CreateUser();
+            UpdateFormer();
         }
 
-        private void CreateUser()
+        private void UpdateFormer()
         {
-            DateTime CurrentDate = DateTime.Now;
             int status;
             try
             {
                 string message;
                 if (NameField.Text == "" || ConfirmPasswordField.Text == "" || PassworField.Text == ""
-                        || PhoneField.Text == "" || CityField.Text == "" || YearField.Text == ""
-                        || MonthField.Text == "" || DayField.Text == "" || FormerTpeField.Text == ""
-                        || FormerTpeField.Text == ""
+                        || PhoneField.Text == "" || CityField.Text == "" 
+                        || FormerTpeField.Text == "" || FormerTpeField.Text == ""
                     )
                 {
                     message = "Ther is an Empty Field, Please Try Again";
@@ -152,7 +122,7 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                     Users users = new Users()
                     {
                         /* Matricule => GenerateMatricule */
-                        Matricule = Program.GenerateMatricule(10).ToString(),
+                        Matricule = "",
                         /* Name => */
                         Name = Convert.ToString(NameField.Text),
                         /* Password => */
@@ -160,9 +130,9 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                         /* Phone => */
                         Phone = Convert.ToString(PhoneField.Text),
                         /* DateNaissance => */
-                        DateNaissance = Convert.ToString($"{YearField.Text}-{MonthField.Text}-{DayField.Text}"),
+                        DateNaissance = "",
                         /* Age => */
-                        Age = Convert.ToInt32(CurrentDate.Year - Convert.ToInt32(YearField.Text)),
+                        Age = 0,
                         /* city => */
                         City = Convert.ToString(CityField.Text),
                         /* FormerType => */
@@ -171,35 +141,22 @@ namespace Student_Management.IHM_s.ComposentsGraphique.Formers
                         UserType = Convert.ToString(UserRoleField.Text),
 
                     };
-                    status = FormersController.CreateUser(users);
-                    if (status == ResponseStatus.ResponseCodeMatriculeExists)
+                    status = FormersController.UpdateFormer(users, FormerMatricule);
+                    if (status == ResponseStatus.ResponseCodeFormerIsUpdatedSuccessfly)
                     {
-                        message = "The Matricule is Already Exists, Please Try Again";
-                        Program.LaunchUnhandleExceptionForm(message);
-                    }
-                    else if (status == ResponseStatus.ResponseCodeNameExists)
-                    {
-                        message = "The Name is Already Exists, Please Try Again";
-                        Program.LaunchUnhandleExceptionForm(message);
-                    }
-                    else if (status == ResponseStatus.ResponseCodePasswordExists)
-                    {
-                        message = "The Password is Already Exists, Please Try Again";
-                        Program.LaunchUnhandleExceptionForm(message);
-                    }
-                    else if (status == ResponseStatus.ResponseCodeCreateUserSuccefly)
-                    {
-                        message = "Former Createad successfly.";
-                        ClearAllFields();
+                        message = "Success : Former Updated Succefly";
                         Program.LaunchHandleExceptionForm(message);
-                        logger.Info($"Former Information : \n{FormersController.FormerCreated(users)}");
+                    }
+                    else
+                    {
+                        message = "Error : there is somethingwrong...";
+                        Program.LaunchUnhandleExceptionForm(message);
                     }
                 }
             }
             catch (Exception ex)
             {
-                logger.Error($"Error : {ex.Message}");
-                Program.LaunchUnhandleExceptionForm(Convert.ToString(ex.Message));
+                Program.LaunchUnhandleExceptionForm(ex.Message.ToString());
             }
         }
     }

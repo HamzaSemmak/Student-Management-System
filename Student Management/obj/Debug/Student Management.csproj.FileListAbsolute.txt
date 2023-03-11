@@ -51,9 +51,10 @@ C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.exe
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student Management.pdb
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm.resources
-C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.Formers.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.BaseForm.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.Formers.CreateFormer.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.HandleExceptionForm.resources
-C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.Formers.FormerSetting.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.Formers.ShowFormerDetails.resources
+C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.ConfirmExceptionForm.resources
+C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.Formers.UpdateFormers.resources
+C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.FormersForm.resources

@@ -69,23 +69,29 @@
     <Compile Include="IHM%27s\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM%27s\ComposentsGraphique\ConfirmExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM%27s\ComposentsGraphique\ConfirmExceptionForm.Designer.cs">
+      <DependentUpon>ConfirmExceptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\Formers\CreateFormer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\Formers\CreateFormer.Designer.cs">
       <DependentUpon>CreateFormer.cs</DependentUpon>
     </Compile>
-    <Compile Include="IHM%27s\ComposentsGraphique\Formers\FormerSetting.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IHM%27s\ComposentsGraphique\Formers\FormerSetting.Designer.cs">
-      <DependentUpon>FormerSetting.cs</DependentUpon>
-    </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\Formers\ShowFormerDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\Formers\ShowFormerDetails.Designer.cs">
       <DependentUpon>ShowFormerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM%27s\ComposentsGraphique\Formers\UpdateFormers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM%27s\ComposentsGraphique\Formers\UpdateFormers.Designer.cs">
+      <DependentUpon>UpdateFormers.cs</DependentUpon>
     </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\HandleExceptionForm.cs">
       <SubType>Form</SubType>
@@ -105,11 +111,11 @@
     <Compile Include="IHM%27s\ComposentsGraphique\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IHM%27s\Formers.cs">
+    <Compile Include="IHM%27s\FormersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IHM%27s\Formers.Designer.cs">
-      <DependentUpon>Formers.cs</DependentUpon>
+    <Compile Include="IHM%27s\FormersForm.Designer.cs">
+      <DependentUpon>FormersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IHM%27s\PrincipalForm.cs">
       <SubType>Form</SubType>
@@ -131,14 +137,17 @@
     <EmbeddedResource Include="IHM%27s\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IHM%27s\ComposentsGraphique\ConfirmExceptionForm.resx">
+      <DependentUpon>ConfirmExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHM%27s\ComposentsGraphique\Formers\CreateFormer.resx">
       <DependentUpon>CreateFormer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IHM%27s\ComposentsGraphique\Formers\FormerSetting.resx">
-      <DependentUpon>FormerSetting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="IHM%27s\ComposentsGraphique\Formers\ShowFormerDetails.resx">
       <DependentUpon>ShowFormerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM%27s\ComposentsGraphique\Formers\UpdateFormers.resx">
+      <DependentUpon>UpdateFormers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM%27s\ComposentsGraphique\HandleExceptionForm.resx">
       <DependentUpon>HandleExceptionForm.cs</DependentUpon>
@@ -149,8 +158,8 @@
     <EmbeddedResource Include="IHM%27s\ComposentsGraphique\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IHM%27s\Formers.resx">
-      <DependentUpon>Formers.cs</DependentUpon>
+    <EmbeddedResource Include="IHM%27s\FormersForm.resx">
+      <DependentUpon>FormersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM%27s\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>

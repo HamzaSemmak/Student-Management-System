@@ -35,8 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +85,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(13, 124);
             this.guna2Panel1.TabIndex = 4;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this.guna2Button1;
-            // 
             // guna2Button1
             // 
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -105,6 +100,11 @@
             this.guna2Button1.Size = new System.Drawing.Size(60, 63);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.guna2Button1;
             // 
             // UnhandleExceptionForm
             // 

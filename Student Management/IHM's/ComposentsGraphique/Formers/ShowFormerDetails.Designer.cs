@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowFormerDetails));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.UserName = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -55,7 +54,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.Controls.Add(this.UserName);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
@@ -75,16 +74,17 @@
             this.guna2Panel1.Controls.Add(this.PasswordField);
             this.guna2Panel1.Controls.Add(this.NameField);
             this.guna2Panel1.Controls.Add(this.MatriculeField);
-            this.guna2Panel1.Location = new System.Drawing.Point(34, 19);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(574, 605);
+            this.guna2Panel1.Size = new System.Drawing.Size(1041, 644);
             this.guna2Panel1.TabIndex = 10;
             // 
             // UserName
             // 
             this.UserName.AutoSize = true;
             this.UserName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserName.Location = new System.Drawing.Point(213, 99);
+            this.UserName.Location = new System.Drawing.Point(222, 130);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(92, 21);
             this.UserName.TabIndex = 26;
@@ -101,11 +101,11 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.Location = new System.Drawing.Point(448, 16);
+            this.guna2Button2.Location = new System.Drawing.Point(50, 377);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(50, 50);
+            this.guna2Button2.Size = new System.Drawing.Size(197, 50);
             this.guna2Button2.TabIndex = 25;
+            this.guna2Button2.Text = "Update Former";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
@@ -118,18 +118,18 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(510, 16);
+            this.guna2Button1.Location = new System.Drawing.Point(264, 377);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(50, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(206, 50);
             this.guna2Button1.TabIndex = 24;
+            this.guna2Button1.Text = "Delete Former";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // UserType
             // 
             this.UserType.AutoSize = true;
             this.UserType.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserType.Location = new System.Drawing.Point(211, 536);
+            this.UserType.Location = new System.Drawing.Point(716, 279);
             this.UserType.Name = "UserType";
             this.UserType.Size = new System.Drawing.Size(92, 21);
             this.UserType.TabIndex = 23;
@@ -140,7 +140,7 @@
             // 
             this.FormerType.AutoSize = true;
             this.FormerType.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormerType.Location = new System.Drawing.Point(211, 458);
+            this.FormerType.Location = new System.Drawing.Point(716, 217);
             this.FormerType.Name = "FormerType";
             this.FormerType.Size = new System.Drawing.Size(92, 21);
             this.FormerType.TabIndex = 22;
@@ -151,7 +151,7 @@
             // 
             this.Age.AutoSize = true;
             this.Age.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Age.Location = new System.Drawing.Point(211, 384);
+            this.Age.Location = new System.Drawing.Point(716, 143);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(92, 21);
             this.Age.TabIndex = 21;
@@ -162,7 +162,7 @@
             // 
             this.DateNaissance.AutoSize = true;
             this.DateNaissance.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateNaissance.Location = new System.Drawing.Point(211, 308);
+            this.DateNaissance.Location = new System.Drawing.Point(716, 67);
             this.DateNaissance.Name = "DateNaissance";
             this.DateNaissance.Size = new System.Drawing.Size(92, 21);
             this.DateNaissance.TabIndex = 20;
@@ -173,7 +173,7 @@
             // 
             this.Phone.AutoSize = true;
             this.Phone.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone.Location = new System.Drawing.Point(211, 238);
+            this.Phone.Location = new System.Drawing.Point(220, 269);
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(92, 21);
             this.Phone.TabIndex = 19;
@@ -184,7 +184,7 @@
             // 
             this.Password.AutoSize = true;
             this.Password.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(211, 164);
+            this.Password.Location = new System.Drawing.Point(220, 195);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(92, 21);
             this.Password.TabIndex = 18;
@@ -195,7 +195,7 @@
             // 
             this.Matricule.AutoSize = true;
             this.Matricule.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Matricule.Location = new System.Drawing.Point(211, 35);
+            this.Matricule.Location = new System.Drawing.Point(220, 66);
             this.Matricule.Name = "Matricule";
             this.Matricule.Size = new System.Drawing.Size(92, 21);
             this.Matricule.TabIndex = 10;
@@ -206,7 +206,7 @@
             // 
             this.UserTypeField.AutoSize = true;
             this.UserTypeField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTypeField.Location = new System.Drawing.Point(37, 535);
+            this.UserTypeField.Location = new System.Drawing.Point(518, 278);
             this.UserTypeField.Name = "UserTypeField";
             this.UserTypeField.Size = new System.Drawing.Size(90, 22);
             this.UserTypeField.TabIndex = 16;
@@ -217,7 +217,7 @@
             // 
             this.FormerTypeField.AutoSize = true;
             this.FormerTypeField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormerTypeField.Location = new System.Drawing.Point(37, 457);
+            this.FormerTypeField.Location = new System.Drawing.Point(518, 216);
             this.FormerTypeField.Name = "FormerTypeField";
             this.FormerTypeField.Size = new System.Drawing.Size(114, 22);
             this.FormerTypeField.TabIndex = 15;
@@ -228,7 +228,7 @@
             // 
             this.AgeField.AutoSize = true;
             this.AgeField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeField.Location = new System.Drawing.Point(37, 383);
+            this.AgeField.Location = new System.Drawing.Point(518, 142);
             this.AgeField.Name = "AgeField";
             this.AgeField.Size = new System.Drawing.Size(47, 22);
             this.AgeField.TabIndex = 14;
@@ -239,7 +239,7 @@
             // 
             this.PhoneField.AutoSize = true;
             this.PhoneField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneField.Location = new System.Drawing.Point(37, 237);
+            this.PhoneField.Location = new System.Drawing.Point(46, 268);
             this.PhoneField.Name = "PhoneField";
             this.PhoneField.Size = new System.Drawing.Size(66, 22);
             this.PhoneField.TabIndex = 13;
@@ -250,7 +250,7 @@
             // 
             this.DateNaissanceField.AutoSize = true;
             this.DateNaissanceField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateNaissanceField.Location = new System.Drawing.Point(37, 307);
+            this.DateNaissanceField.Location = new System.Drawing.Point(518, 66);
             this.DateNaissanceField.Name = "DateNaissanceField";
             this.DateNaissanceField.Size = new System.Drawing.Size(144, 22);
             this.DateNaissanceField.TabIndex = 12;
@@ -261,7 +261,7 @@
             // 
             this.PasswordField.AutoSize = true;
             this.PasswordField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordField.Location = new System.Drawing.Point(37, 164);
+            this.PasswordField.Location = new System.Drawing.Point(46, 195);
             this.PasswordField.Name = "PasswordField";
             this.PasswordField.Size = new System.Drawing.Size(92, 22);
             this.PasswordField.TabIndex = 11;
@@ -272,7 +272,7 @@
             // 
             this.NameField.AutoSize = true;
             this.NameField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameField.Location = new System.Drawing.Point(39, 98);
+            this.NameField.Location = new System.Drawing.Point(48, 129);
             this.NameField.Name = "NameField";
             this.NameField.Size = new System.Drawing.Size(64, 22);
             this.NameField.TabIndex = 10;
@@ -283,7 +283,7 @@
             // 
             this.MatriculeField.AutoSize = true;
             this.MatriculeField.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MatriculeField.Location = new System.Drawing.Point(37, 27);
+            this.MatriculeField.Location = new System.Drawing.Point(46, 58);
             this.MatriculeField.Name = "MatriculeField";
             this.MatriculeField.Size = new System.Drawing.Size(92, 22);
             this.MatriculeField.TabIndex = 9;
@@ -304,7 +304,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ShowFormerDetails";
-            this.Size = new System.Drawing.Size(1004, 644);
+            this.Size = new System.Drawing.Size(1041, 644);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);

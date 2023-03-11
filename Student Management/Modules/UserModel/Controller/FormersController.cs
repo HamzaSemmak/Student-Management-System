@@ -12,27 +12,8 @@ namespace Student_Management.Modules.UserModel.Controller
 {
     public class FormersController : Users
     {
-        internal readonly char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
 
         public FormersController() { }
-
-        private string GenerateMatricule(int size)
-        {
-            byte[] data = new byte[4 * size];
-            using (var crypto = RandomNumberGenerator.Create())
-            {
-                crypto.GetBytes(data);
-            }
-            StringBuilder result = new StringBuilder(size);
-            for (int i = 0; i < size; i++)
-            {
-                var rnd = BitConverter.ToUInt32(data, i * 4);
-                var idx = rnd % chars.Length;
-
-                result.Append(chars[idx]);
-            }
-            return result.ToString();
-        }
 
         public int CreateUser(Users user)
         {
@@ -47,7 +28,7 @@ namespace Student_Management.Modules.UserModel.Controller
             {
                 ParameterName = "@matricule",
                 SqlDbType = SqlDbType.VarChar,
-                Value = GenerateMatricule(10).ToString(),
+                Value = user.Matricule,
                 Direction = ParameterDirection.Input
             };
             SqlParameter Name = new SqlParameter()
@@ -198,11 +179,64 @@ namespace Student_Management.Modules.UserModel.Controller
             return Users;
         }
 
-        public StringBuilder FormerCreated()
+        public StringBuilder FormerCreated(Users user)
         {
             StringBuilder Former = new StringBuilder();
-
+            Former.AppendLine($"Matricule : {user.Matricule} ");
+            Former.AppendLine($"Name : {user.Name} ");
+            Former.AppendLine($"Password : {user.Password} ");
+            Former.AppendLine($"DateNaissance : {user.DateNaissance} ");
+            Former.AppendLine($"Age : {user.Age} ");
+            Former.AppendLine($"City : {user.City} ");
+            Former.AppendLine($"Former Type : {user.FormerType} ");
+            Former.AppendLine($"User Type : {user.UserType} ");
             return Former;
+        }
+
+        public int DeleteFormer(string FormerMatricule)
+        {
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            this.sqlCommand = new SqlCommand()
+            {
+                CommandText = "DeleteFormer",
+                Connection = this.sqlConnection,
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter Matricule = new SqlParameter()
+            {
+                ParameterName = "@matricule",
+                SqlDbType = SqlDbType.VarChar,
+                Value = FormerMatricule,
+                Direction = ParameterDirection.Input
+            };
+            SqlParameter Output = new SqlParameter()
+            {
+                ParameterName = "@msg",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Output
+            };
+            this.sqlCommand.Parameters.Add(Matricule);
+            this.sqlCommand.Parameters.Add(Output);
+            this.OpenConnection();
+            this.sqlCommand.ExecuteNonQuery();
+            this.CloseConnection();
+
+            return Convert.ToInt32(Output.Value);
+        }
+
+        public int UpdateFormer(Users user, string FormerMatricule)
+        {
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Update Users Set" +
+                $" Name = '{user.Name}', Password = '{user.Password}', Phone = '{user.Phone}'," +
+                $" City = '{user.City}', FormerType = '{user.FormerType}', UserType = '{user.UserType}' " +
+                $" where Matricule = '{FormerMatricule}'";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlCommand.ExecuteNonQuery();
+            this.CloseConnection();
+
+            return 40319;
         }
     }
 }

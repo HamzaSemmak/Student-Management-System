@@ -7,6 +7,8 @@ using Student_Management.Modules.LoggerManager;
 using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
 using System;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 using static log4net.Appender.RollingFileAppender;
 
@@ -60,13 +62,39 @@ namespace Student_Management
 
         public static void LaunchFormerForm()
         {
-            Formers _Formers = new Formers();
+            FormersForm _Formers = new FormersForm();
             _Formers.Show();
+        }
+
+        public static void LaunchConfirmExceptionForm(string message)
+        {
+            ConfirmExceptionForm _ConfirmExceptionForm = new ConfirmExceptionForm(message);
+            _ConfirmExceptionForm.Show();
         }
 
         public static string CurrentDate()
         {
             return $"{dateTime.DayOfWeek}, {dateTime.Day} {dateTime.ToString("MMMM")} {dateTime.Year}";
+        }
+
+        public static string GenerateMatricule(int size)
+        {
+            char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+
+            byte[] data = new byte[4 * size];
+            using (var crypto = RandomNumberGenerator.Create())
+            {
+                crypto.GetBytes(data);
+            }
+            StringBuilder result = new StringBuilder(size);
+            for (int i = 0; i < size; i++)
+            {
+                var rnd = BitConverter.ToUInt32(data, i * 4);
+                var idx = rnd % chars.Length;
+
+                result.Append(chars[idx]);
+            }
+            return result.ToString();
         }
 
         [STAThread]

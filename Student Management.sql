@@ -126,6 +126,35 @@ Declare @status int
 Execute CreateUser 'AAZZEE', 'Mohemed Semmak', 'MM102345', 0666666666, '2001-07-28', 21, 'Rabat', 'Teacher', 'User', @status Output
 Select @status
 
+Create Procedure DeleteFormer
+(
+	@matricule varchar(10),
+	@msg int Out
+)
+As
+Begin
+	Declare @ID int
+	Select @ID = ID from Users where Matricule = @matricule
+	If Exists (Select COUNT(*) from LockedUser where ID = @ID Having Count(*) > 0)
+		Begin 
+			Delete from LockedUser where ID = @ID
+			Delete from Users where Matricule = @matricule
+			Set @msg = 40311 Return @msg 
+		End /* Authentificate User */
+	If Exists (Select COUNT(*) from Users where ID = @ID Having Count(*) = 0)
+		Begin 
+			Set @msg = 40312 Return @msg 
+		End /* Former is Undefiened */
+	Else 
+		Begin 
+			Delete from Users where Matricule = @matricule
+			Delete from LockedUser where ID = @ID
+			Set @msg = 40310 Return @msg 
+		End /* Delete Former */
+End
+Declare @status int
+Execute DeleteFormer 'rFGhayFkYA', @status Output
+Select @status
 
 /* */	
 Select * from Users;
