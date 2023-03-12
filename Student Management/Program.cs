@@ -72,6 +72,12 @@ namespace Student_Management
             _ConfirmExceptionForm.Show();
         }
 
+        public static void LaunchStudentsForm()
+        {
+            StudentsForm _StudentsForm = new StudentsForm();
+            _StudentsForm.Show();
+        }
+
         public static string CurrentDate()
         {
             return $"{dateTime.DayOfWeek}, {dateTime.Day} {dateTime.ToString("MMMM")} {dateTime.Year}";

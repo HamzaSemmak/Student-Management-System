@@ -1,0 +1,4 @@
+2023-03-12 22:59:45,136 [INFO ] [1] Student_Management.Program - Start Application Student Management System
+2023-03-12 22:59:45,396 [INFO ] [1] Student_Management.IHM_s.ComposentsGraphique.LoadingForm - Connect...
+2023-03-12 22:59:59,895 [ERROR] [1] Student_Management.IHM_s.Authentification - Adresse
+2023-03-12 22:59:59,902 [ERROR] [1] Student_Management.IHM_s.ComposentsGraphique.UnhandleExceptionForm - Error : Adresse 

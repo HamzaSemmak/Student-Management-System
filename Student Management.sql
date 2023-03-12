@@ -33,16 +33,51 @@ Create Table FormersType(
 	type varchar(255)
 );
 
-/* Insertion */
-insert into FormersType values('Teacher'),('Directeur of School'),('General guard'),('Security'),('Driver'),('Director assistance');
-insert into Users values('AA10274','Hamza Semmak','AA102374','0667786555','2001-07-28',21,'Rabat','Directeur of School','Admin','InLocked',1),
-						('KKA1050','Karim Aissa','Karim2001','0662504036','2001-06-05',21,'Rabat','Director assistance','Admin','InLocked',1),
-						('AbY7080','Yacine Abnai','Yacine4040','0668689530','2001-08-05',24,'Rabat','General guard','Admin','InLocked',1),
-						('TTR5070','Tarik Oulkhabou','Tarik2001','0825361452','1998-06-05',24,'Medelt','General guard','Admin','InLocked',1),
-						('SAIT404','Soufiane Ait Hammou','Souf1999','0452639874','1999-06-05',24,'Sale','General guard','Admin','InLocked',1),
-						('OMAM404','Omar Amoun','Omar1950','0632323232','1993-12-20',30,'Kenitra','Teacher','User','InLocked',1),
-						('AKBAO20','Zakaria Baoune','ZkBa5065','046568705','1998-11-25',25,'Khenifra','Teacher','User','InLocked',1);
+Create Table Students (
+	ID int primary key,
+	Matricule varchar(10) unique,
+	Name varchar(45) Unique,
+	DateNaissance varchar(20),
+	Age int,
+	City varchar(255),
+	Adresse varchar(255),
+	Gender varchar(20),
+	Constraint Ck_Students_Gender check (Gender in ('Male', 'Female')),
+);
 
+Create Table Parents (
+	ID int primary key,
+	ID_Students int foreign key references Students(ID),
+	Father_Name varchar(255),
+	Father_CIN varchar(15),
+	Father_DateNaissance varchar(10),
+	Mother_Name varchar(255),
+	Mother_CIN varchar(15),
+	Mother_DateNaissance varchar(10),
+);
+
+/* Insertion */
+insert into FormersType Values
+('Teacher'),('Directeur of School'),('General guard'),('Security'),('Driver'),('Director assistance');
+insert into Users values
+('AA10274','Hamza Semmak','AA102374','0667786555','2001-07-28',21,'Rabat','Directeur of School','Admin','InLocked',1),
+('KKA1050','Karim Aissa','Karim2001','0662504036','2001-06-05',21,'Rabat','Director assistance','Admin','InLocked',1),
+('AbY7080','Yacine Abnai','Yacine4040','0668689530','2001-08-05',24,'Rabat','General guard','Admin','InLocked',1),
+('TTR5070','Tarik Oulkhabou','Tarik2001','0825361452','1998-06-05',24,'Medelt','General guard','Admin','InLocked',1),
+('SAIT404','Soufiane Ait Hammou','Souf1999','0452639874','1999-06-05',24,'Sale','Teacher','Admin','InLocked',1),
+('OMAM404','Omar Amoun','Omar1950','0632323232','1993-12-20',30,'Kenitra','Teacher','User','InLocked',1),
+('AKBAO20','Zakaria Baoune','ZkBa5065','046568705','1998-11-25',25,'Khenifra','Teacher','User','InLocked',1);
+
+/* Requetes : */	
+Select * from Users;
+Select * from Students;
+Select * from FormersType;
+Select Count(*) from FormersType;
+Select * from LockedUser;
+Delete from LockedUser;
+Select Count(*) from Users;
+Select Count(*) from Students;
+Delete from Users where ID = 14;
 
 /* Procedure Stocke */
 Create Procedure Authentification
@@ -156,11 +191,42 @@ Declare @status int
 Execute DeleteFormer 'rFGhayFkYA', @status Output
 Select @status
 
-/* */	
-Select * from Users;
-Select * from FormersType;
-Select Count(*) from FormersType;
-Select * from LockedUser;
-Delete from Users;
-Select Count(*) from Users;
-Delete from Users where ID = 14
+Create Procedure CreateStudent
+(
+	@matricule varchar(10),
+	@nameOfStudents varchar(45),
+	@dateNaissance varchar(10),
+	@age int,
+	@city varchar(255),
+	@adresse varchar(255),
+	@gender varchar(20),
+	@fatherName varchar(255),
+	@fatherCIN varchar(15),
+	@fatherDateNaissance varchar(10), 
+	@motherName varchar(255),
+	@motherCIN varchar(15),
+	@motherDateNaissance varchar(10),
+	@msg int Out
+)
+As
+Begin
+	Declare @ID int
+	Select @ID = Count(*) from Students;
+	Set @ID = @ID + 1
+	IF Exists (Select COUNT(*) from Students where Matricule = @matricule Having COUNT(*) > 0 )
+		Begin Set @msg = 10101 Return @msg End /* Matricule Exists */
+	IF Exists (Select COUNT(*) from Students where Name = @nameOfStudents Having COUNT(*) > 0 )
+		Begin Set @msg = 10102 Return @msg End /* Name Of Student Exists */
+	Else 
+		Begin
+			Insert into Students values (@ID, @matricule, @nameOfStudents, @dateNaissance, @age, @city, @adresse, @gender)
+			Insert into Parents values (@ID, @ID, @fatherName, @fatherCIN, @fatherDateNaissance, @motherName, @motherCIN, @motherDateNaissance);
+			Set @msg = 10100 Return @msg  /* Students Created Successfly */
+		End
+End
+Declare @status int
+Execute CreateStudent 'rFGhayFksA', 'Student2', '2001-01-28', 22,
+		 'Rabat', 'IMM 7 APPT 13 CYM Rabat', 'Male', 'Student1Father',
+		 'AA102374s', '1989-02-02', 'Student2Mother',
+		 'AA102384s', '1989-02-02', @status Output
+Select @status

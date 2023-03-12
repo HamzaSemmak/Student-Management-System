@@ -81,6 +81,12 @@
     <Compile Include="IHM%27s\ComposentsGraphique\Formers\CreateFormer.Designer.cs">
       <DependentUpon>CreateFormer.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM%27s\ComposentsGraphique\Formers\FormersSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IHM%27s\ComposentsGraphique\Formers\FormersSetting.Designer.cs">
+      <DependentUpon>FormersSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHM%27s\ComposentsGraphique\Formers\ShowFormerDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,9 +129,18 @@
     <Compile Include="IHM%27s\PrincipalForm.Designer.cs">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM%27s\StudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM%27s\StudentsForm.Designer.cs">
+      <DependentUpon>StudentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Config\ResponseStatus.cs" />
     <Compile Include="Modules\ConnectionDB\ConnectionDB.cs" />
     <Compile Include="Modules\Logger Manager\Log4NetManager.cs" />
+    <Compile Include="Modules\StudentModel\Controller\StudentsController.cs" />
+    <Compile Include="Modules\StudentModel\Model\Parents.cs" />
+    <Compile Include="Modules\StudentModel\Model\Students.cs" />
     <Compile Include="Modules\UserModel\Controller\FormersController.cs" />
     <Compile Include="Modules\UserModel\Controller\UsersController.cs" />
     <Compile Include="Modules\UserModel\Model\Users.cs" />
@@ -163,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IHM%27s\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM%27s\StudentsForm.resx">
+      <DependentUpon>StudentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -2,6 +2,8 @@
 using log4net.Repository.Hierarchy;
 using Student_Management.Modules.Config;
 using Student_Management.Modules.LoggerManager;
+using Student_Management.Modules.StudentModel.Controller;
+using Student_Management.Modules.StudentModel.Model;
 using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
 using System;
@@ -22,6 +24,7 @@ namespace Student_Management.IHM_s
         public bool Access = true;
         public UsersController UserController;
         public ResponseStatus ResponseStatus;
+        public StudentsController StudentsController;
         public int UserID;
         public string UserName;
         public string UserFormerType;
@@ -31,6 +34,7 @@ namespace Student_Management.IHM_s
             InitializeComponent();
             UserController = new UsersController();
             ResponseStatus = new ResponseStatus();
+            StudentsController = new StudentsController();
             UserID = Convert.ToInt32(UserController.GetUserID());
             InitializePrincipalForm();
         }
@@ -58,10 +62,10 @@ namespace Student_Management.IHM_s
         {
             if (!redirect)
                 return;
-
-            foreach (Users Rows in UserController.GetUsersWithLimit(7))
+            
+            foreach (Students Rows in StudentsController.GetStudentsWithLimit(7))
             {
-                this.guna2DataGridView1.Rows.Add(Rows.Matricule, Rows.Name, Rows.FormerType, Rows.Phone);
+                this.guna2DataGridView1.Rows.Add(Rows.Matricule, Rows.Name, Rows.DateNaissance, Rows.Age);
             }
         }
 
@@ -77,6 +81,10 @@ namespace Student_Management.IHM_s
             //User Locked UserName && Type Former :
             label2.Text = $"{UserController.UserLocked(UserID)[0]}";
             label3.Text = $"{UserController.UserLocked(UserID)[1]}";
+
+            //Count Of Students :
+            label4.Text = $"{StudentsController.CountOfStudents()}";
+            StudentsProgressBar.Value = PercentOfMembers(StudentsController.CountOfStudents());
 
             //Count Of Formers :
             label5.Text = $"{UserController.GetNumbersOfUser()}";
@@ -155,6 +163,12 @@ namespace Student_Management.IHM_s
         {
             this.Hide();
             Program.LaunchFormerForm();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.LaunchStudentsForm();
         }
     }
 }

@@ -5,6 +5,7 @@ using Student_Management.Modules.LoggerManager;
 using Student_Management.Modules.UserModel.Controller;
 using Student_Management.Modules.UserModel.Model;
 using System;
+using System.Collections.Generic;
 using System.Web.UI;
 using System.Windows.Forms;
 
@@ -35,6 +36,7 @@ namespace Student_Management.IHM_s
         {
             this.guna2DataGridView1.RowTemplate.Height = 40;
             ListOfUsers(Access);
+            guna2TextBox1.Text = "";
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -67,6 +69,7 @@ namespace Student_Management.IHM_s
         {
             panel1.Controls.Clear();
             panel1.Controls.Add(CreateFormer);
+            guna2TextBox1.Text = "";
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
@@ -74,6 +77,7 @@ namespace Student_Management.IHM_s
             panel1.Controls.Clear();
             panel1.Controls.Add(AllFormers);
             ListOfUsers(Access);
+            guna2TextBox1.Text = "";
         }
 
         public void ReturnFromDeleteFormerForm()
@@ -106,9 +110,45 @@ namespace Student_Management.IHM_s
 
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
+            LiveSearch();
+        }
 
+        private void LiveSearch()
+        {
+            if (guna2TextBox1.Text.Length > 0)
+            {
+                try
+                {
+                    panel1.Controls.Clear();
+                    panel1.Controls.Add(AllFormers);
+                    this.guna2DataGridView1.Rows.Clear();
+
+                    if (FormerController.GetUsersBySearch(guna2TextBox1.Text) == null)
+                    {
+                        this.guna2DataGridView1.Rows.Add("Undefiened Name, Please try again");
+                    }
+                    foreach (Users user in FormerController.GetUsersBySearch(guna2TextBox1.Text))
+                    {
+                        this.guna2DataGridView1.Rows.Add(user.Matricule, user.Name, user.Phone, user.DateNaissance, user.FormerType);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Error($"Error : Search for former => {ex.Message} ");
+                }
+            }
+            else if (guna2TextBox1.Text.Length == 0)
+            {
+                ListOfUsers(Access);
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.LaunchStudentsForm();
         }
     }
 }

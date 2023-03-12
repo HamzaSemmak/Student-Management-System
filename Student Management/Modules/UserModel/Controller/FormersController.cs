@@ -238,5 +238,34 @@ namespace Student_Management.Modules.UserModel.Controller
 
             return 40319;
         }
+
+        public List<Users> GetUsersBySearch(string Name)
+        {
+            List<Users> Users = new List<Users>();
+            this.sqlConnection = new SqlConnection(this.ConnectionString);
+            string Query = $"Select * from Users where Name Like '%{Name}%' ";
+            this.sqlCommand = new SqlCommand(Query, this.sqlConnection);
+            this.OpenConnection();
+            this.sqlDataReader = this.sqlCommand.ExecuteReader();
+            if (this.sqlDataReader.HasRows)
+            {
+                while (this.sqlDataReader.Read())
+                {
+                    Users.Add(new Users(
+                        Convert.ToString(this.sqlDataReader["Matricule"]),
+                        Convert.ToString(this.sqlDataReader["Name"]),
+                        Convert.ToString(this.sqlDataReader["Password"]),
+                        Convert.ToString(this.sqlDataReader["Phone"]),
+                        Convert.ToString(this.sqlDataReader["DateNaissance"]),
+                        Convert.ToInt32(this.sqlDataReader["Age"]),
+                        Convert.ToString(this.sqlDataReader["city"]),
+                        Convert.ToString(this.sqlDataReader["FormerType"]),
+                        Convert.ToString(this.sqlDataReader["UserType"])
+                    ));
+                }
+            }
+            this.CloseConnection();
+            return Users;
+        }
     }
 }

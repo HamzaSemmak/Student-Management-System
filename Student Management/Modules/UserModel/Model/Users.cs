@@ -6,7 +6,6 @@ namespace Student_Management.Modules.UserModel.Model
 {
     public class Users : DB
     {
-        public static readonly ILog Logger = LogManager.GetLogger(typeof(Users));
         protected string matricule;
         protected string name;
         protected string password;

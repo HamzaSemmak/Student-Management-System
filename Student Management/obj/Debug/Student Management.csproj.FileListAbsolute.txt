@@ -58,3 +58,4 @@ C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.ConfirmExceptionForm.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.ComposentsGraphique.Formers.UpdateFormers.resources
 C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.FormersForm.resources
+C:\WorkSpace\Student Management\Student Management\obj\Debug\Student_Management.IHM_s.StudentsForm.resources
